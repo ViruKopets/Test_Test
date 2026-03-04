@@ -220,6 +220,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5149109104777279118, guid: e2c38ef2462715a47a6e65f693a2b005, type: 3}
+      propertyPath: Invent
+      value: 
+      objectReference: {fileID: 1727364885}
+    - target: {fileID: 5149109104777279118, guid: e2c38ef2462715a47a6e65f693a2b005, type: 3}
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1660947303}
@@ -910,6 +914,10 @@ PrefabInstance:
       propertyPath: MyId
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5149109104777279118, guid: e2c38ef2462715a47a6e65f693a2b005, type: 3}
+      propertyPath: Invent
+      value: 
+      objectReference: {fileID: 1727364885}
     - target: {fileID: 5149109104777279118, guid: e2c38ef2462715a47a6e65f693a2b005, type: 3}
       propertyPath: canvas
       value: 
@@ -1774,6 +1782,7 @@ MonoBehaviour:
   - {fileID: 1797897157}
   - {fileID: 1408042977}
   - {fileID: 1257361511}
+  EmptySlot: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
 --- !u!114 &1797897155 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3485237081554312943, guid: e2c38ef2462715a47a6e65f693a2b005, type: 3}
@@ -1901,6 +1910,10 @@ PrefabInstance:
       propertyPath: MyId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5149109104777279118, guid: e2c38ef2462715a47a6e65f693a2b005, type: 3}
+      propertyPath: Invent
+      value: 
+      objectReference: {fileID: 1727364885}
     - target: {fileID: 5149109104777279118, guid: e2c38ef2462715a47a6e65f693a2b005, type: 3}
       propertyPath: canvas
       value: 
@@ -2525,6 +2538,10 @@ PrefabInstance:
       propertyPath: Cam
       value: 
       objectReference: {fileID: 1849900807}
+    - target: {fileID: 5149109104777279118, guid: e2c38ef2462715a47a6e65f693a2b005, type: 3}
+      propertyPath: Invent
+      value: 
+      objectReference: {fileID: 1727364885}
     - target: {fileID: 5149109104777279118, guid: e2c38ef2462715a47a6e65f693a2b005, type: 3}
       propertyPath: canvas
       value: 
