@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Collectable
   - InterByItem
+  - ChangeCam
   layers:
   - Default
   - TransparentFX
