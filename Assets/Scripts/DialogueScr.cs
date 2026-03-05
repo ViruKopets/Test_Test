@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -34,6 +35,11 @@ public class DialogueScr : MonoBehaviour
 
     private void Start()
     {
+        if (Invent == null)
+        {
+            GameObject[] objects = GameObject.FindGameObjectsWithTag("InventoryCanvas");
+            Invent = objects[0];
+        }
         if (ActivateOnStart)
         {
             ActivateDialogue();

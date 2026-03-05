@@ -22,7 +22,6 @@ public class CameraChange : MonoBehaviour
 
         if (hit.collider != null)
         {
-            Debug.Log(hit.collider.gameObject);
             if (hit.collider.CompareTag("ChangeCam"))
             {
                 Cam.transform.position = PosToBe.position;

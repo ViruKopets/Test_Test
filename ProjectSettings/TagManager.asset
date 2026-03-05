@@ -8,6 +8,7 @@ TagManager:
   - InterByItem
   - ChangeCam
   - Inventory
+  - InventoryCanvas
   layers:
   - Default
   - TransparentFX

@@ -14,6 +14,16 @@ public class InventItem : MonoBehaviour, IDragHandler, IDropHandler
     [SerializeField] Vector2 DefaulPos;
     [SerializeField] bool IsSomething = false;
     [SerializeField] Chest LastItem;
+
+    public void SetNewSceneCam()
+    {
+        Cam = Camera.main;
+    }
+    //void Start()
+    //{
+    //    DefaulPos = MyRect.anchoredPosition;
+    //}
+
     public void OnDrag(PointerEventData eventData)
     {
         if (IsSomething)
@@ -31,7 +41,6 @@ public class InventItem : MonoBehaviour, IDragHandler, IDropHandler
 
         if (hit.collider != null)
         {
-            Debug.Log(hit.collider.gameObject);
             if (hit.collider.CompareTag("InterByItem"))
             {
                 LastItem = hit.collider.GetComponent<Chest>();
