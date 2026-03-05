@@ -19,13 +19,16 @@ public class DialogueScr : MonoBehaviour
     [SerializeField] List<string> Names;
 
     [Header("Other")]
-    [SerializeField] float TimeToLetter;
-    [SerializeField] bool ActivateOnStart;
+    [SerializeField] float TimeToLetter = 0.1f;
+    [SerializeField] bool ActivateOnStart = false;
+    [SerializeField] bool ActivateOnTrigger = false;
     [SerializeField] GameObject ObjToOff;
     [SerializeField] List<GameObject> ObjToOn;
 
     bool Active;
     int Index = 0;
+    Coroutine WordAppCor;
+
     private void Start()
     {
         if (ActivateOnStart)
@@ -38,9 +41,10 @@ public class DialogueScr : MonoBehaviour
     {
         DialoguePanel.SetActive(true);
         ImgPlace.sprite = Imgs[Index];
-        //WordPlace.text = " ";
-        WordPlace.text = Words[Index];
+        WordPlace.text = "";
+        //WordPlace.text = Words[Index];
         NamePlace.text = Names[Index];
+        WordAppCor = StartCoroutine(WordAppear(0));
         Index = Index + 1;
         Active = true;
     }
@@ -51,30 +55,54 @@ public class DialogueScr : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            if (WordAppCor != null)
+            {
+                StopCoroutine(WordAppCor);
+                WordAppCor = null;
+                WordPlace.text = Words[Index - 1];
+                return;
+            }
             if (Index == Imgs.Count)
             {
-                Index = 0;
-                Active = false;
-                DialoguePanel.SetActive(false);
-                if (ObjToOff != null) ObjToOff.SetActive(false);
-                if (ObjToOn != null)
-                {
-                    for (int i = 0; i < ObjToOn.Count; i++)
-                    {
-                        ObjToOn[i].SetActive(true);
-                    }
-                }
+                DialogueDone();
                 return;
             }
             ImgPlace.sprite = Imgs[Index];
-            WordPlace.text = Words[Index];
             NamePlace.text = Names[Index];
+            WordPlace.text = "";
+            WordAppCor = StartCoroutine(WordAppear(Index));
             Index = Index + 1;
         }
     }
 
-    IEnumerator WordAppear()
+    void DialogueDone()
     {
-        return null;
+        Index = 0;
+        Active = false;
+        DialoguePanel.SetActive(false);
+        if (ObjToOff != null) ObjToOff.SetActive(false);
+        if (ObjToOn != null)
+        {
+            for (int i = 0; i < ObjToOn.Count; i++)
+            {
+                ObjToOn[i].SetActive(true);
+            }
+        }
+    }
+    IEnumerator WordAppear(int Ind)
+    {
+        char[] letters = Words[Ind].ToCharArray();
+        for (int i = 0; i < letters.Length; i++)
+        {
+            WordPlace.text += letters[i];
+            yield return new WaitForSeconds(TimeToLetter);
+        }
+        WordAppCor = null;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (ActivateOnTrigger)
+            ActivateDialogue();
     }
 }

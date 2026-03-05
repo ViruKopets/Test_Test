@@ -499,8 +499,9 @@ MonoBehaviour:
   Names:
   - Mommy
   - Mommy
-  TimeToLetter: 0
+  TimeToLetter: 0.05
   ActivateOnStart: 1
+  ActivateOnTrigger: 0
   ObjToOff: {fileID: 885366935}
   ObjToOn:
   - {fileID: 2094829692}
