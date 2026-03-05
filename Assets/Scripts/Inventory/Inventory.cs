@@ -9,7 +9,23 @@ public class Inventory : MonoBehaviour
     [SerializeField] List<string> ItemPurp;
     [SerializeField] List<InventItem> Items;
     [SerializeField] Sprite EmptySlot;
+    [SerializeField] GameObject Layout;
 
+    private void Awake()
+    {
+        GameObject[] objects = GameObject.FindGameObjectsWithTag("Inventory");
+        if (objects.Length > 1)
+        {
+            // ≈сли нашли больше одного - уничтожаем этот
+            Destroy(gameObject);
+            Destroy(Layout);
+        }
+        else
+        {
+            DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(Layout);
+        }
+    }
     public void TakeNewItem(Sprite NewPic, string Purpose, PickupItem Item)
     {
         for (int i = 0; i < Taken.Count; i++)

@@ -5,6 +5,8 @@ public class CameraChange : MonoBehaviour
     [SerializeField] Camera Cam;
     [SerializeField] Transform PosToBe;
     [SerializeField] bool lockCamera;
+    [SerializeField] Player Pla;
+    [SerializeField] bool Freeze;
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -24,6 +26,7 @@ public class CameraChange : MonoBehaviour
             if (hit.collider.CompareTag("ChangeCam"))
             {
                 Cam.transform.position = PosToBe.position;
+                Pla.IsFreezed(Freeze);
             }
         }
     }

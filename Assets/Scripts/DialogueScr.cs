@@ -25,6 +25,8 @@ public class DialogueScr : MonoBehaviour
     [SerializeField] List<GameObject> ObjToOff;
     [SerializeField] List<GameObject> ObjToOn;
     [SerializeField] GameObject Invent;
+    [SerializeField] Player Pla;
+    [SerializeField] Animator MommyAnimator;
 
     bool Active;
     int Index = 0;
@@ -35,7 +37,7 @@ public class DialogueScr : MonoBehaviour
         if (ActivateOnStart)
         {
             ActivateDialogue();
-        }
+        }        
     }
 
     void ActivateDialogue()
@@ -49,6 +51,7 @@ public class DialogueScr : MonoBehaviour
         Index = Index + 1;
         Active = true;
         Invent.SetActive(false);
+        Pla.IsFreezed(true);
     }
 
     private void Update()
@@ -98,6 +101,11 @@ public class DialogueScr : MonoBehaviour
             }
         }
         Invent.SetActive(true);
+        Pla.IsFreezed(false);
+        if (MommyAnimator != null)
+        {
+            MommyAnimator.SetTrigger("Leave");
+        }
     }
     IEnumerator WordAppear(int Ind)
     {

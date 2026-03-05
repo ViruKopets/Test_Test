@@ -7,6 +7,7 @@ TagManager:
   - Collectable
   - InterByItem
   - ChangeCam
+  - Inventory
   layers:
   - Default
   - TransparentFX
