@@ -68,4 +68,8 @@ public class InventItem : MonoBehaviour, IDragHandler, IDropHandler
         LastItem.ItemFit();
         IsSomething = false;
     }
+    public void Clear()
+    {
+
+    }
 }

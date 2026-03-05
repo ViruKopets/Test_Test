@@ -49,4 +49,14 @@ public class Inventory : MonoBehaviour
             ImgPlaces[Id].sprite = EmptySlot;
         }
     }
+
+    public void ClearItems()
+    {
+        for (int i = 0;i < Items.Count; i++)
+        {
+            Taken[i] = false;
+            ImgPlaces[i].sprite = EmptySlot;
+            Items[i].Clear();
+        }
+    }
 }
