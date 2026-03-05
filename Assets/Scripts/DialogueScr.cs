@@ -22,8 +22,9 @@ public class DialogueScr : MonoBehaviour
     [SerializeField] float TimeToLetter = 0.1f;
     [SerializeField] bool ActivateOnStart = false;
     [SerializeField] bool ActivateOnTrigger = false;
-    [SerializeField] GameObject ObjToOff;
+    [SerializeField] List<GameObject> ObjToOff;
     [SerializeField] List<GameObject> ObjToOn;
+    [SerializeField] GameObject Invent;
 
     bool Active;
     int Index = 0;
@@ -47,6 +48,7 @@ public class DialogueScr : MonoBehaviour
         WordAppCor = StartCoroutine(WordAppear(0));
         Index = Index + 1;
         Active = true;
+        Invent.SetActive(false);
     }
 
     private void Update()
@@ -80,7 +82,14 @@ public class DialogueScr : MonoBehaviour
         Index = 0;
         Active = false;
         DialoguePanel.SetActive(false);
-        if (ObjToOff != null) ObjToOff.SetActive(false);
+        if (ObjToOff != null)
+        {
+            for (int i = 0; i < ObjToOff.Count; i++)
+            {
+                ObjToOff[i].SetActive(false);
+            }
+            
+        }
         if (ObjToOn != null)
         {
             for (int i = 0; i < ObjToOn.Count; i++)
@@ -88,6 +97,7 @@ public class DialogueScr : MonoBehaviour
                 ObjToOn[i].SetActive(true);
             }
         }
+        Invent.SetActive(true);
     }
     IEnumerator WordAppear(int Ind)
     {

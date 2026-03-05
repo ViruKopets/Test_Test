@@ -29,4 +29,9 @@ public class SceneLoader : MonoBehaviour
         yield return new WaitForSeconds(Time);
         SceneManager.LoadScene(SceneName);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        LoadScene();
+    }
 }
