@@ -1235,6 +1235,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: 3Forrest
+  Gm: {fileID: 0}
+  NextScenePosId: 0
   MenuLoad: 0
   Time: 1
   BlackPanel: {fileID: 0}
@@ -1331,6 +1333,8 @@ MonoBehaviour:
   Dialogs:
   - {fileID: 1771739710}
   ObjToOff: []
+  ObjToOn: []
+  ItemObjToOff: []
   PlayersPos:
   - {fileID: 49501586}
   - {fileID: 1559696874}
@@ -1452,6 +1456,10 @@ PrefabInstance:
       propertyPath: Words.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1806978606130606109, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: 'Imgs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 4b4eefab8b8cff244b63af122da2dca2, type: 3}
     - target: {fileID: 1806978606130606109, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: ObjToOn.Array.size
       value: 0
