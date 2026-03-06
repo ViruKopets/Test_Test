@@ -6,6 +6,7 @@ public class PickupItem : MonoBehaviour
     [SerializeField] Inventory Invent;
     [SerializeField] Sprite MyPic;
     [SerializeField] string MyPurpose;
+    [SerializeField] GameObject BackArrow;
     public void PickUp()
     {
         if (Invent == null)
@@ -14,6 +15,7 @@ public class PickupItem : MonoBehaviour
             Invent = objects[0].GetComponent<Inventory>();
         }
         Invent.TakeNewItem(MyPic, MyPurpose, this);
+        if (BackArrow != null) BackArrow.SetActive(true);
     }
 
     public void ItemTaken()

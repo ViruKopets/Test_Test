@@ -25,7 +25,7 @@ public class DialogueScr : MonoBehaviour
     [SerializeField] bool ActivateOnTrigger = false;
     [SerializeField] List<GameObject> ObjToOff;
     [SerializeField] List<GameObject> ObjToOn;
-    [SerializeField] GameObject Invent;
+    [SerializeField] Inventory Invent;
     [SerializeField] Player Pla;
     [SerializeField] Animator MommyAnimator;
 
@@ -37,13 +37,13 @@ public class DialogueScr : MonoBehaviour
     {
         if (Invent == null)
         {
-            GameObject[] objects = GameObject.FindGameObjectsWithTag("InventoryCanvas");
-            Invent = objects[0];
+            GameObject[] objects = GameObject.FindGameObjectsWithTag("Inventory");
+            Invent = objects[0].GetComponent<Inventory>();
         }
         if (ActivateOnStart)
         {
             ActivateDialogue();
-        }        
+        }
     }
 
     void ActivateDialogue()
@@ -56,7 +56,7 @@ public class DialogueScr : MonoBehaviour
         WordAppCor = StartCoroutine(WordAppear(0));
         Index = Index + 1;
         Active = true;
-        Invent.SetActive(false);
+        Invent.SetVisuals(false);
         Pla.IsFreezed(true);
     }
 
@@ -91,14 +91,6 @@ public class DialogueScr : MonoBehaviour
         Index = 0;
         Active = false;
         DialoguePanel.SetActive(false);
-        if (ObjToOff != null)
-        {
-            for (int i = 0; i < ObjToOff.Count; i++)
-            {
-                ObjToOff[i].SetActive(false);
-            }
-            
-        }
         if (ObjToOn != null)
         {
             for (int i = 0; i < ObjToOn.Count; i++)
@@ -106,11 +98,19 @@ public class DialogueScr : MonoBehaviour
                 ObjToOn[i].SetActive(true);
             }
         }
-        Invent.SetActive(true);
+        Invent.SetVisuals(true);
         Pla.IsFreezed(false);
         if (MommyAnimator != null)
         {
             MommyAnimator.SetTrigger("Leave");
+        }
+        if (ObjToOff != null)
+        {
+            for (int i = 0; i < ObjToOff.Count; i++)
+            {
+                ObjToOff[i].SetActive(false);
+            }
+
         }
     }
     IEnumerator WordAppear(int Ind)

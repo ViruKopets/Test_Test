@@ -70,6 +70,6 @@ public class InventItem : MonoBehaviour, IDragHandler, IDropHandler
     }
     public void Clear()
     {
-
+        IsSomething = false;
     }
 }

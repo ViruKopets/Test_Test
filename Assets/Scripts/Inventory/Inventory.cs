@@ -11,6 +11,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] Sprite EmptySlot;
     [SerializeField] GameObject Layout;
     [SerializeField] GameObject Canvasik;
+    [SerializeField] GameObject Visuals;
 
     private void Awake()
     {
@@ -58,5 +59,10 @@ public class Inventory : MonoBehaviour
             ImgPlaces[i].sprite = EmptySlot;
             Items[i].Clear();
         }
+    }
+
+    public void SetVisuals(bool IsActive)
+    {
+        Visuals.SetActive(IsActive);
     }
 }

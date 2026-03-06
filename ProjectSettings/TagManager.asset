@@ -9,6 +9,7 @@ TagManager:
   - ChangeCam
   - Inventory
   - InventoryCanvas
+  - Ice
   layers:
   - Default
   - TransparentFX

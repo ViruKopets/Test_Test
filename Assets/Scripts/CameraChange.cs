@@ -7,6 +7,8 @@ public class CameraChange : MonoBehaviour
     [SerializeField] bool lockCamera;
     [SerializeField] Player Pla;
     [SerializeField] bool Freeze;
+    [SerializeField] Camerafollower CamFollow;
+    [SerializeField] GameObject ToActivate;
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -24,8 +26,23 @@ public class CameraChange : MonoBehaviour
         {
             if (hit.collider.CompareTag("ChangeCam"))
             {
+                if (CamFollow != null)
+                {
+                    if (lockCamera)
+                    {
+                        CamFollow.enabled = false;
+                    }
+                    else
+                    {
+                        CamFollow.enabled = true;
+                    }
+                }
                 Cam.transform.position = PosToBe.position;
                 Pla.IsFreezed(Freeze);
+                if (ToActivate != null)
+                {
+                    ToActivate.SetActive(true);
+                }
             }
         }
     }
