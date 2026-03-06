@@ -46,7 +46,7 @@ public class DialogueScr : MonoBehaviour
         }
     }
 
-    void ActivateDialogue()
+    public void ActivateDialogue()
     {
         DialoguePanel.SetActive(true);
         ImgPlace.sprite = Imgs[Index];

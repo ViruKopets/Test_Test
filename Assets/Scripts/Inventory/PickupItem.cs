@@ -7,6 +7,8 @@ public class PickupItem : MonoBehaviour
     [SerializeField] Sprite MyPic;
     [SerializeField] string MyPurpose;
     [SerializeField] GameObject BackArrow;
+    [SerializeField] bool IsProgressable;
+    [SerializeField] int ItemProgressId;
     public void PickUp()
     {
         if (Invent == null)
@@ -20,6 +22,11 @@ public class PickupItem : MonoBehaviour
 
     public void ItemTaken()
     {
+        if (IsProgressable)
+        {
+            GameObject[] objects = GameObject.FindGameObjectsWithTag("GameManager");
+            objects[0].GetComponent<GameManager>().ProgressedItem(ItemProgressId);
+        }
         Destroy(this.gameObject);
     }
 }

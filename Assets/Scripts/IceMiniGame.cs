@@ -29,7 +29,6 @@ public class IceMiniGame : MonoBehaviour
             {
                 if (Counter == Cracs.Count)
                 {
-                    Debug.Log("out");
                     this.enabled = false;
                     return;
                 }

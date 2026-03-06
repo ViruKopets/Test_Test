@@ -5,12 +5,22 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     [SerializeField] string SceneName;
+    [SerializeField] GameManager Gm;
+    [SerializeField] int NextScenePosId;
 
     [Header("First Menu Load")]
     [SerializeField] bool MenuLoad = false;
     [SerializeField] float Time = 1f;
     [SerializeField] GameObject BlackPanel;
 
+    private void Start()
+    {
+        if (Gm == null)
+        {
+            GameObject[] objects = GameObject.FindGameObjectsWithTag("GameManager");
+            Gm = objects[0].GetComponent<GameManager>();
+        }
+    }
     public void LoadScene()
     {
         if (MenuLoad)
@@ -19,6 +29,7 @@ public class SceneLoader : MonoBehaviour
         }
         else
         {
+            Gm.SetTransitionInfo(NextScenePosId);
             SceneManager.LoadScene(SceneName);
         }
     }

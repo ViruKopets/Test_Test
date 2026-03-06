@@ -10,6 +10,7 @@ TagManager:
   - Inventory
   - InventoryCanvas
   - Ice
+  - GameManager
   layers:
   - Default
   - TransparentFX

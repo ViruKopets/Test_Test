@@ -595,6 +595,8 @@ MonoBehaviour:
   MyPic: {fileID: 21300000, guid: 25d5c0d10d49bf340af4f66eef3bb171, type: 3}
   MyPurpose: WrYellow
   BackArrow: {fileID: 0}
+  IsProgressable: 0
+  ItemProgressId: 0
 --- !u!1 &189473461
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,6 +745,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemsPurp: BlueLock
+  Delete: 1
+  DialogueToActivate: {fileID: 0}
+  TurnOn: {fileID: 0}
+  TurnOff: {fileID: 0}
+  IsProgress: 0
+  ProggressId: 0
 --- !u!114 &254768588 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3277436510766193722, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
@@ -1948,6 +1956,8 @@ MonoBehaviour:
   MyPic: {fileID: 21300000, guid: 65ce8a34336077944a1b96e7223510a9, type: 3}
   MyPurpose: WrGreen
   BackArrow: {fileID: 0}
+  IsProgressable: 0
+  ItemProgressId: 0
 --- !u!1 &1129696250
 GameObject:
   m_ObjectHideFlags: 0
@@ -2098,6 +2108,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: 2City
+  Gm: {fileID: 1544221800}
+  NextScenePosId: 2
   MenuLoad: 0
   Time: 1
   BlackPanel: {fileID: 0}
@@ -2462,6 +2474,8 @@ MonoBehaviour:
   MyPic: {fileID: 21300000, guid: 7b9beee627c40d041a0140bde0ef066b, type: 3}
   MyPurpose: WrRed
   BackArrow: {fileID: 0}
+  IsProgressable: 0
+  ItemProgressId: 0
 --- !u!61 &1399110220
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2508,6 +2522,52 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1544221798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1544221799}
+  - component: {fileID: 1544221800}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: GameManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1544221799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544221798}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1544221800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544221798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22308de6b26d6904f8fb1901d1930c93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Progress: 0000000000
+  ItemProgress: 0000000000
 --- !u!1 &1603132217
 GameObject:
   m_ObjectHideFlags: 0
@@ -2851,6 +2911,8 @@ MonoBehaviour:
   MyPic: {fileID: 21300000, guid: 42029b7cfc081d94f88ebc1e43df3596, type: 3}
   MyPurpose: BlueLock
   BackArrow: {fileID: 0}
+  IsProgressable: 0
+  ItemProgressId: 0
 --- !u!1 &2051408722
 GameObject:
   m_ObjectHideFlags: 0
@@ -3823,3 +3885,4 @@ SceneRoots:
   - {fileID: 885366937}
   - {fileID: 611578824}
   - {fileID: 105528182}
+  - {fileID: 1544221799}
