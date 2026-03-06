@@ -44,6 +44,10 @@ public class CameraChange : MonoBehaviour
                     ToActivate.SetActive(true);
                 }
             }
+            else if (hit.collider.CompareTag("LoadScene"))
+            {
+                hit.collider.gameObject.GetComponent<SceneLoader>().LoadScene();
+            }
         }
     }
 }

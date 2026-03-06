@@ -45,4 +45,12 @@ public class Bootstraper : MonoBehaviour
             ItemObjToOff[i].transform.position = PosOut;
         }
     }
+
+    public void TurnOnObjByProgress()
+    {
+        for (int i = 0; i < ObjToOn.Count; i++)
+        {
+            ObjToOn[i].SetActive(true);
+        }
+    }
 }

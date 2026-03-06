@@ -32,6 +32,10 @@ public class GameManager : MonoBehaviour
         if (SceneName == "2City")
         {
             Boot.SetPlayerPos(GoesTo);
+            if (Progress[0])
+            {
+                Boot.TurnOnObjByProgress();
+            }
         }
         else if(SceneName == "3Forest")
         {

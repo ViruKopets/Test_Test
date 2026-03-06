@@ -180,7 +180,8 @@ MonoBehaviour:
   TimeToLetter: 0.05
   ActivateOnStart: 0
   ActivateOnTrigger: 1
-  ObjToOff: []
+  ObjToOff:
+  - {fileID: 52407831}
   ObjToOn: []
   Invent: {fileID: 0}
   Pla: {fileID: 254768588}

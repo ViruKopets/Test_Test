@@ -11,6 +11,7 @@ TagManager:
   - InventoryCanvas
   - Ice
   - GameManager
+  - LoadScene
   layers:
   - Default
   - TransparentFX
