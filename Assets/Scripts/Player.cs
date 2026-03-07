@@ -5,6 +5,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rb;
     [SerializeField] float Speed;
+    [SerializeField] SpriteRenderer Sprite;
     float hor;
     bool Freeze;
 
@@ -19,6 +20,14 @@ public class Player : MonoBehaviour
         if (hor != 0)
         {
             rb.linearVelocity = new Vector2(Speed * hor, rb.linearVelocity.y);
+        }
+        if (hor < 0)
+        {
+            Sprite.flipX = true;
+        }
+        else if (hor > 0)
+        {
+            Sprite.flipX = false;
         }
     }
     public void IsFreezed(bool IsIn)

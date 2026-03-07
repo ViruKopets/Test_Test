@@ -63,7 +63,6 @@ public class DialogueScr : MonoBehaviour
     private void Update()
     {
         if (!Active) return;
-
         if (Input.GetMouseButtonDown(0))
         {
             if (WordAppCor != null)
@@ -129,4 +128,6 @@ public class DialogueScr : MonoBehaviour
         if (ActivateOnTrigger)
             ActivateDialogue();
     }
+
+
 }

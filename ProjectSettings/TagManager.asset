@@ -12,6 +12,7 @@ TagManager:
   - Ice
   - GameManager
   - LoadScene
+  - DialogueActivate
   layers:
   - Default
   - TransparentFX
