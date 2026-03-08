@@ -25,7 +25,7 @@ public class Inventory : MonoBehaviour
             DontDestroyOnLoad(Canvasik);
         }
     }
-    public void TakeNewItem(Sprite NewPic, string Purpose, PickupItem Item)
+    public void TakeNewItem(Sprite NewPic, string Purpose, PickupItem Item, bool IsBrakeOnUse)
     {
         for (int i = 0; i < Taken.Count; i++)
         {
@@ -34,7 +34,7 @@ public class Inventory : MonoBehaviour
                 ImgPlaces[i].sprite = NewPic;
                 ItemPurp[i] = Purpose;
                 Taken[i] = true;
-                Items[i].TakeInfo();
+                Items[i].TakeInfo(IsBrakeOnUse);
                 Item.ItemTaken();
                 break;
             }
@@ -46,14 +46,17 @@ public class Inventory : MonoBehaviour
         if (Lock == ItemPurp[Id])
         {
             Items[Id].Used();
-            Taken[Id] = false;
-            ImgPlaces[Id].sprite = EmptySlot;
+            if (Items[Id].DestroyItem)
+            {
+                Taken[Id] = false;
+                ImgPlaces[Id].sprite = EmptySlot;
+            }
         }
     }
 
     public void ClearItems()
     {
-        for (int i = 0;i < Items.Count; i++)
+        for (int i = 0; i < Items.Count; i++)
         {
             Taken[i] = false;
             ImgPlaces[i].sprite = EmptySlot;

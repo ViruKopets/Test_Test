@@ -186,6 +186,11 @@ MonoBehaviour:
   Invent: {fileID: 0}
   Pla: {fileID: 254768588}
   MommyAnimator: {fileID: 0}
+  FreezeAfter: 0
+  ShoudKick: 0
+  CamBack: {fileID: 0}
+  AfterDialogue: {fileID: 0}
+  Hidout: {fileID: 0}
 --- !u!61 &52407834
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -598,6 +603,7 @@ MonoBehaviour:
   BackArrow: {fileID: 0}
   IsProgressable: 0
   ItemProgressId: 0
+  BrakeOnUse: 1
 --- !u!1 &189473461
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,6 +2011,7 @@ MonoBehaviour:
   BackArrow: {fileID: 0}
   IsProgressable: 0
   ItemProgressId: 0
+  BrakeOnUse: 1
 --- !u!1 &1129696250
 GameObject:
   m_ObjectHideFlags: 0
@@ -2523,6 +2530,7 @@ MonoBehaviour:
   BackArrow: {fileID: 0}
   IsProgressable: 0
   ItemProgressId: 0
+  BrakeOnUse: 1
 --- !u!61 &1399110220
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2960,6 +2968,7 @@ MonoBehaviour:
   BackArrow: {fileID: 0}
   IsProgressable: 0
   ItemProgressId: 0
+  BrakeOnUse: 1
 --- !u!1 &2051408722
 GameObject:
   m_ObjectHideFlags: 0
@@ -3122,7 +3131,7 @@ MonoBehaviour:
   lockCamera: 0
   Pla: {fileID: 254768588}
   Freeze: 1
-  DialoguePan: {fileID: 2094829692}
+  DialoguePan: {fileID: 1772845366}
   CamFollow: {fileID: 0}
   ToActivate: {fileID: 0}
 --- !u!1 &1222468622174733490
@@ -3565,6 +3574,7 @@ MonoBehaviour:
   DefaulPos: {x: 50, y: -50}
   IsSomething: 0
   LastItem: {fileID: 0}
+  DestroyItem: 1
 --- !u!114 &5149109104669660948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3585,6 +3595,7 @@ MonoBehaviour:
   DefaulPos: {x: 50, y: -162.295}
   IsSomething: 0
   LastItem: {fileID: 0}
+  DestroyItem: 1
 --- !u!114 &5149109104940469005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3605,6 +3616,7 @@ MonoBehaviour:
   DefaulPos: {x: 50, y: -386.885}
   IsSomething: 0
   LastItem: {fileID: 0}
+  DestroyItem: 1
 --- !u!114 &5149109106379498751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3625,6 +3637,7 @@ MonoBehaviour:
   DefaulPos: {x: 50, y: -274.59}
   IsSomething: 0
   LastItem: {fileID: 0}
+  DestroyItem: 1
 --- !u!1001 &5505926159525152346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3721,6 +3734,10 @@ PrefabInstance:
       propertyPath: Pla
       value: 
       objectReference: {fileID: 254768588}
+    - target: {fileID: 1806978606130606109, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: ShoudKick
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1806978606130606109, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: MommyAnimator
       value: 

@@ -40,6 +40,19 @@ public class Player : MonoBehaviour
         else
         {
             Freeze = false;
+            Hide(false);
+        }
+    }
+
+    public void Hide(bool ShoudHide)
+    {
+        if (ShoudHide)
+        {
+            Sprite.color = new Color(1, 1, 1, 0);
+        }
+        else
+        {
+            Sprite.color = new Color(1, 1, 1, 1);
         }
     }
 }

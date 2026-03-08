@@ -24,6 +24,10 @@ public class Chest : MonoBehaviour
             GameObject[] objects = GameObject.FindGameObjectsWithTag("GameManager");
             objects[0].GetComponent<GameManager>().Progressed(ProggressId);
         }
+        if (TurnOn != null)
+        {
+            TurnOn.SetActive(true);
+        }
         if (Delete) Destroy(this.gameObject);
     }
 }

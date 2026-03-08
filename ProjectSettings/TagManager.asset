@@ -13,11 +13,13 @@ TagManager:
   - GameManager
   - LoadScene
   - DialogueActivate
+  - MagazinePic
+  - HidingSpot
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 

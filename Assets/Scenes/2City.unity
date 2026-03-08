@@ -490,8 +490,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 568252636}
   Offset: {x: 0, y: 2.2403, z: -10}
-  LeftX: -2.8
-  RightX: 142.5
+  LeftX: 16.5
+  RightX: 123.2
 --- !u!1 &482364030
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,7 +641,7 @@ Transform:
   m_GameObject: {fileID: 566647203}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 88.32, y: 0.79, z: 0}
+  m_LocalPosition: {x: 88.88, y: 0.85, z: 0}
   m_LocalScale: {x: 9.990619, y: 5.6582165, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -681,7 +681,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -728,6 +728,7 @@ MonoBehaviour:
   lockCamera: 0
   Pla: {fileID: 0}
   Freeze: 0
+  DialoguePan: {fileID: 1771739711}
   CamFollow: {fileID: 0}
   ToActivate: {fileID: 0}
 --- !u!1 &568252636 stripped
@@ -951,6 +952,11 @@ MonoBehaviour:
   Invent: {fileID: 0}
   Pla: {fileID: 5066175755449093856}
   MommyAnimator: {fileID: 0}
+  FreezeAfter: 0
+  ShoudKick: 0
+  CamBack: {fileID: 0}
+  AfterDialogue: {fileID: 0}
+  Hidout: {fileID: 0}
 --- !u!61 &941290318
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1703,6 +1709,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5066175755449093856}
     - target: {fileID: 1806978606130606109, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: ShoudKick
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1806978606130606109, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: ActivateOnStart
       value: 0
       objectReference: {fileID: 0}
@@ -1919,6 +1929,10 @@ PrefabInstance:
     - target: {fileID: 1632266519710645689, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632266519710645689, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6160963616005735453, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
       propertyPath: m_LocalPosition.x

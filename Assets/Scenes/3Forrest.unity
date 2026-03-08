@@ -169,6 +169,7 @@ MonoBehaviour:
   lockCamera: 1
   Pla: {fileID: 1658041373}
   Freeze: 1
+  DialoguePan: {fileID: 512247582}
   CamFollow: {fileID: 1903983727}
   ToActivate: {fileID: 1782385992}
 --- !u!61 &29187822
@@ -298,7 +299,7 @@ Transform:
   m_GameObject: {fileID: 106116110}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.005, y: -0.22, z: 0}
+  m_LocalPosition: {x: -0.861, y: -0.22, z: 0}
   m_LocalScale: {x: 0.056041803, y: 0.099973366, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -464,7 +465,7 @@ Transform:
   m_GameObject: {fileID: 207202656}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.79099995, y: -0.22, z: 0}
+  m_LocalPosition: {x: -0.634, y: -0.22, z: 0}
   m_LocalScale: {x: 0.056041803, y: 0.099973366, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -874,7 +875,7 @@ Transform:
   m_GameObject: {fileID: 533157559}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.93499994, y: 0.223, z: 0}
+  m_LocalPosition: {x: -0.861, y: 0, z: 0}
   m_LocalScale: {x: 0.056041803, y: 0.099973366, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1170,7 +1171,7 @@ Transform:
   m_GameObject: {fileID: 1058613426}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.62499994, y: 0, z: 0}
+  m_LocalPosition: {x: -0.634, y: 0.23, z: 0}
   m_LocalScale: {x: 0.056041803, y: 0.099973366, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2166,7 +2167,7 @@ Transform:
   m_GameObject: {fileID: 1768800144}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8588543, y: 0, z: 0}
+  m_LocalPosition: {x: -0.861, y: 0.23, z: 0}
   m_LocalScale: {x: 0.056041803, y: 0.099973366, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2491,7 +2492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 1658041372}
   Offset: {x: 0, y: 2.4003, z: -10}
-  LeftX: 0.1
+  LeftX: -11
   RightX: 50.87
 --- !u!1 &2020873238
 GameObject:
@@ -2867,6 +2868,7 @@ MonoBehaviour:
   lockCamera: 0
   Pla: {fileID: 1658041373}
   Freeze: 0
+  DialoguePan: {fileID: 512247582}
   CamFollow: {fileID: 1903983727}
   ToActivate: {fileID: 1782385992}
 --- !u!61 &2091234548
@@ -2996,7 +2998,7 @@ Transform:
   m_GameObject: {fileID: 2108462141}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7099999, y: 0.214, z: 0}
+  m_LocalPosition: {x: -0.634, y: 0, z: 0}
   m_LocalScale: {x: 0.056041803, y: 0.099973366, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

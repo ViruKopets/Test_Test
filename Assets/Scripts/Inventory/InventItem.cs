@@ -14,6 +14,7 @@ public class InventItem : MonoBehaviour, IDragHandler, IDropHandler
     [SerializeField] Vector2 DefaulPos;
     [SerializeField] bool IsSomething = false;
     [SerializeField] Chest LastItem;
+    public bool DestroyItem = true;
 
     public void SetNewSceneCam()
     {
@@ -45,28 +46,25 @@ public class InventItem : MonoBehaviour, IDragHandler, IDropHandler
             {
                 LastItem = hit.collider.GetComponent<Chest>();
                 Invent.CompareCompat(LastItem.PassInfo(), MyId);
-                MyRect.anchoredPosition = DefaulPos;
             }
-            else
-            {
-                MyRect.anchoredPosition = DefaulPos;
-            }
-        }
-        else
-        {
             MyRect.anchoredPosition = DefaulPos;
         }
+        MyRect.anchoredPosition = DefaulPos;
     }
 
-    public void TakeInfo()
+    public void TakeInfo(bool BrakeOnUse)
     {
         IsSomething = true;
+        DestroyItem = BrakeOnUse;
     }
 
     public void Used()
     {
         LastItem.ItemFit();
-        IsSomething = false;
+        if (DestroyItem)
+        {
+            IsSomething = false;
+        }
     }
     public void Clear()
     {

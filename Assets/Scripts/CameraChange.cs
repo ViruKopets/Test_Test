@@ -27,28 +27,11 @@ public class CameraChange : MonoBehaviour
         {
             if (DialoguePan.activeSelf)
             {
-                Debug.Log("asd");
                 return;
             }
             if (hit.collider.CompareTag("ChangeCam"))
             {
-                if (CamFollow != null)
-                {
-                    if (lockCamera)
-                    {
-                        CamFollow.enabled = false;
-                    }
-                    else
-                    {
-                        CamFollow.enabled = true;
-                    }
-                }
-                Cam.transform.position = PosToBe.position;
-                Pla.IsFreezed(Freeze);
-                if (ToActivate != null)
-                {
-                    ToActivate.SetActive(true);
-                }
+                ChangeCamera();
             }
             else if (hit.collider.CompareTag("LoadScene"))
             {
@@ -58,6 +41,27 @@ public class CameraChange : MonoBehaviour
             {
                 hit.collider.gameObject.GetComponent<DialogueScr>().ActivateDialogue();
             }
+        }
+    }
+
+    public void ChangeCamera()
+    {
+        if (CamFollow != null)
+        {
+            if (lockCamera)
+            {
+                CamFollow.enabled = false;
+            }
+            else
+            {
+                CamFollow.enabled = true;
+            }
+        }
+        Cam.transform.position = PosToBe.position;
+        Pla.IsFreezed(Freeze);
+        if (ToActivate != null)
+        {
+            ToActivate.SetActive(true);
         }
     }
 }

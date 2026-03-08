@@ -24,7 +24,7 @@ public class Bootstraper : MonoBehaviour
     public void SetPlayerPos(int PosId)
     {
         Player.transform.position = PlayersPos[PosId].position;
-        if (PosId == 3)
+        if (PosId == 2)
         {
             Dialogs[0].ActivateDialogue();
         }

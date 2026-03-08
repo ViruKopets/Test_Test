@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] List<bool> Progress;
     [SerializeField] List<bool> ItemProgress;
     int GoesTo;
+    bool GoodEnding;
     //public bool SomeDone;
 
     private void Awake()
@@ -70,5 +71,10 @@ public class GameManager : MonoBehaviour
     public void ProgressedItem(int ItemProgressId)
     {
         ItemProgress[ItemProgressId] = true;
+    }
+
+    public void SetEnding(bool IsGood)
+    {
+        GoodEnding = IsGood;
     }
 }

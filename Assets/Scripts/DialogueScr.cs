@@ -28,6 +28,11 @@ public class DialogueScr : MonoBehaviour
     [SerializeField] Inventory Invent;
     [SerializeField] Player Pla;
     [SerializeField] Animator MommyAnimator;
+    [SerializeField] bool FreezeAfter = false;
+    [SerializeField] bool ShoudKick = false;
+    [SerializeField] CameraChange CamBack;
+    [SerializeField] DialogueScr AfterDialogue;
+    [SerializeField] HidingSpot Hidout;
 
     bool Active;
     int Index = 0;
@@ -48,6 +53,7 @@ public class DialogueScr : MonoBehaviour
 
     public void ActivateDialogue()
     {
+        if (DialoguePanel.activeSelf) return;
         DialoguePanel.SetActive(true);
         ImgPlace.sprite = Imgs[Index];
         WordPlace.text = "";
@@ -56,6 +62,11 @@ public class DialogueScr : MonoBehaviour
         WordAppCor = StartCoroutine(WordAppear(0));
         Index = Index + 1;
         Active = true;
+        if (Invent == null)
+        {
+            GameObject[] objects = GameObject.FindGameObjectsWithTag("Inventory");
+            Invent = objects[0].GetComponent<Inventory>();
+        }
         Invent.SetVisuals(false);
         Pla.IsFreezed(true);
     }
@@ -98,10 +109,17 @@ public class DialogueScr : MonoBehaviour
             }
         }
         Invent.SetVisuals(true);
-        Pla.IsFreezed(false);
+        Pla.IsFreezed(FreezeAfter);
         if (MommyAnimator != null)
         {
             MommyAnimator.SetTrigger("Leave");
+        }
+        if (ShoudKick)
+        {
+            CamBack.ChangeCamera();
+            AfterDialogue.ActivateDialogue();
+            Hidout.CanHide = true;
+
         }
         if (ObjToOff != null)
         {
