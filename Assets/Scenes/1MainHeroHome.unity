@@ -2164,6 +2164,7 @@ MonoBehaviour:
   SceneName: 2City
   Gm: {fileID: 1544221800}
   NextScenePosId: 2
+  LoadByTrigger: 1
   MenuLoad: 0
   Time: 1
   BlackPanel: {fileID: 1772845366}
@@ -2621,7 +2622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22308de6b26d6904f8fb1901d1930c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Progress: 0000000000
+  Progress: 000000000000
   ItemProgress: 0000000000
 --- !u!1 &1603132217
 GameObject:

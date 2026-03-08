@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] List<bool> ItemProgress;
     int GoesTo;
     bool GoodEnding;
+    public int PicIndex;
+    public int PicIndex2;
     //public bool SomeDone;
 
     private void Awake()
@@ -38,7 +40,7 @@ public class GameManager : MonoBehaviour
                 Boot.TurnOnObjByProgress();
             }
         }
-        else if(SceneName == "3Forest")
+        else if (SceneName == "3Forest")
         {
             if (Progress[0])
             {
@@ -51,13 +53,8 @@ public class GameManager : MonoBehaviour
         }
         else if (SceneName == "4Hostel")
         {
-            if (ItemProgress[1])
-            {
-                Boot.TurnOffItems();
-            }
             if (Progress[1])
             {
-                Boot.TurnOnById(0);
                 Boot.TurnOnById(1);
                 Boot.TurnOffById(0);
             }
@@ -80,6 +77,11 @@ public class GameManager : MonoBehaviour
             {
                 Boot.TurnOnById(5);
                 Boot.TurnOffById(4);
+            }
+            if (ItemProgress[1])
+            {
+                Boot.TurnOffItems();
+                Boot.TurnOnById(0);
             }
         }
         else if (SceneName == "5Bar")

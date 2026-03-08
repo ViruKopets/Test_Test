@@ -4041,6 +4041,7 @@ MonoBehaviour:
   IsSity: 1
   SceneName: 4Hostel
   Player: {fileID: 1747043676}
+  MiniGame: {fileID: 256344252}
 --- !u!4 &1112140992
 Transform:
   m_ObjectHideFlags: 0

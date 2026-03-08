@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class MiniGameScr : MonoBehaviour
 {
@@ -40,6 +41,8 @@ public class MiniGameScr : MonoBehaviour
                 Checks(hit.collider.gameObject);
                 if (PickedIndex1 != -1 && PickedIndex2 != -1)
                 {
+                    Gm.PicIndex = PickedIndex1;
+                    Gm.PicIndex2 = PickedIndex2;
                     DialogueCheck();
                 }
             }
@@ -99,5 +102,18 @@ public class MiniGameScr : MonoBehaviour
             BadDialogue.ActivateDialogue();
             Gm.SetEnding(false);
         }
+    }
+
+    public void SetAllDialogsNotKick()
+    {
+        UselessDialogue.NotKick();
+        GoodDialogue.NotKick();
+        BadDialogue.NotKick();
+
+        PickedIndex1 = Gm.PicIndex;
+        PickedIndex2 = Gm.PicIndex2;
+        Pics[PickedIndex1].transform.position = FPlace.position;
+        Pics[PickedIndex2].transform.position = SPlace.position;
+
     }
 }

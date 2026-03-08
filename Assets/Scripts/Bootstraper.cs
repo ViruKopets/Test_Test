@@ -11,6 +11,7 @@ public class Bootstraper : MonoBehaviour
     [SerializeField] bool IsSity;
     [SerializeField] string SceneName;
     [SerializeField] GameObject Player;
+    [SerializeField] MiniGameScr MiniGame;
     Vector3 PosOut = new Vector3(0, -1000, 0);
     GameManager Gm;
 
@@ -43,6 +44,10 @@ public class Bootstraper : MonoBehaviour
         for (int i = 0; i < ItemObjToOff.Count; i++)
         {
             ItemObjToOff[i].transform.position = PosOut;
+            if (MiniGame != null)
+            {
+                MiniGame.SetAllDialogsNotKick();
+            }
         }
     }
 
@@ -53,13 +58,15 @@ public class Bootstraper : MonoBehaviour
             ObjToOn[i].SetActive(true);
         }
     }
+
     public void TurnOnById(int Index)
     {
-        ObjToOff[Index].SetActive(true);
+        ObjToOn[Index].SetActive(true);
     }
+
     public void TurnOffById(int Index)
     {
-        ObjToOn[Index].SetActive(false);
+        ObjToOff[Index].SetActive(false);
 
     }
 }

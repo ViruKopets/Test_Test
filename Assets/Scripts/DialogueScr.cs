@@ -147,5 +147,8 @@ public class DialogueScr : MonoBehaviour
             ActivateDialogue();
     }
 
-
+    public void NotKick()
+    {
+        ShoudKick = false;
+    }
 }
