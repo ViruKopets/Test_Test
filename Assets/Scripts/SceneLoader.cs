@@ -8,6 +8,9 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] GameManager Gm;
     [SerializeField] int NextScenePosId;
     [SerializeField] bool LoadByTrigger = true;
+    [SerializeField] bool ByProgress = false;
+    [SerializeField] int ProgressCheck;
+    [SerializeField] DialogueScr NotYetDialigue;
 
     [Header("First Menu Load")]
     [SerializeField] bool MenuLoad = false;
@@ -34,6 +37,14 @@ public class SceneLoader : MonoBehaviour
             {
                 GameObject[] objects = GameObject.FindGameObjectsWithTag("GameManager");
                 Gm = objects[0].GetComponent<GameManager>();
+            }
+            if (ByProgress)
+            {
+                if (!Gm.CheckProgress(ProgressCheck))
+                {
+                    NotYetDialigue.ActivateDialogue();
+                    return;
+                }
             }
             Gm.SetTransitionInfo(NextScenePosId);
             SceneManager.LoadScene(SceneName);

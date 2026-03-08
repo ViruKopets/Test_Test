@@ -15,6 +15,7 @@ TagManager:
   - DialogueActivate
   - MagazinePic
   - HidingSpot
+  - Pic
   layers:
   - Default
   - TransparentFX

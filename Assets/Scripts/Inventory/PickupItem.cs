@@ -10,7 +10,8 @@ public class PickupItem : MonoBehaviour
     [SerializeField] bool IsProgressable;
     [SerializeField] int ItemProgressId;
     [SerializeField] bool BrakeOnUse = true;
-    
+    [SerializeField] GameObject TurnOnOnCollect;
+
     public void PickUp()
     {
         if (Invent == null)
@@ -28,6 +29,10 @@ public class PickupItem : MonoBehaviour
         {
             GameObject[] objects = GameObject.FindGameObjectsWithTag("GameManager");
             objects[0].GetComponent<GameManager>().ProgressedItem(ItemProgressId);
+        }
+        if (TurnOnOnCollect != null)
+        {
+            TurnOnOnCollect.SetActive(true);
         }
         Destroy(this.gameObject);
     }

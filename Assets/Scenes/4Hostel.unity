@@ -258,6 +258,7 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 1
   ProggressId: 2
+  endgate: 0
 --- !u!61 &70434631
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -577,6 +578,9 @@ MonoBehaviour:
   CamBack: {fileID: 0}
   AfterDialogue: {fileID: 0}
   Hidout: {fileID: 0}
+  GivesProgress: 0
+  ProgressId: 0
+  minDisplayTime: 0.01
 --- !u!1 &256344249
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,6 +816,7 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 0
   ProggressId: 1
+  endgate: 0
 --- !u!212 &326549814
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1138,6 +1143,9 @@ MonoBehaviour:
   CamBack: {fileID: 0}
   AfterDialogue: {fileID: 0}
   Hidout: {fileID: 0}
+  GivesProgress: 0
+  ProgressId: 0
+  minDisplayTime: 0.01
 --- !u!61 &351542334
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1323,6 +1331,7 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 1
   ProggressId: 4
+  endgate: 0
 --- !u!61 &416423758
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1473,6 +1482,9 @@ MonoBehaviour:
   CamBack: {fileID: 1489573474}
   AfterDialogue: {fileID: 1085940688}
   Hidout: {fileID: 1428615848}
+  GivesProgress: 0
+  ProgressId: 0
+  minDisplayTime: 0.01
 --- !u!1 &465896321
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,6 +1668,9 @@ MonoBehaviour:
   Gm: {fileID: 0}
   NextScenePosId: 3
   LoadByTrigger: 0
+  ByProgress: 0
+  ProgressCheck: 0
+  NotYetDialigue: {fileID: 0}
   MenuLoad: 0
   Time: 1
   BlackPanel: {fileID: 0}
@@ -1832,6 +1847,9 @@ MonoBehaviour:
   CamBack: {fileID: 0}
   AfterDialogue: {fileID: 0}
   Hidout: {fileID: 0}
+  GivesProgress: 0
+  ProgressId: 0
+  minDisplayTime: 0.01
 --- !u!61 &565359484
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2032,6 +2050,7 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 1
   ProggressId: 1
+  endgate: 0
 --- !u!1 &672605163
 GameObject:
   m_ObjectHideFlags: 0
@@ -2283,6 +2302,7 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 1
   ProggressId: 5
+  endgate: 0
 --- !u!61 &707889847
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2455,6 +2475,9 @@ MonoBehaviour:
   CamBack: {fileID: 0}
   AfterDialogue: {fileID: 0}
   Hidout: {fileID: 0}
+  GivesProgress: 0
+  ProgressId: 0
+  minDisplayTime: 0.01
 --- !u!61 &709933635
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2631,6 +2654,7 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 0
   ProggressId: 1
+  endgate: 0
 --- !u!212 &749053182
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2813,6 +2837,9 @@ MonoBehaviour:
   CamBack: {fileID: 0}
   AfterDialogue: {fileID: 0}
   Hidout: {fileID: 0}
+  GivesProgress: 0
+  ProgressId: 0
+  minDisplayTime: 0.01
 --- !u!61 &812370094
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3257,6 +3284,7 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 1
   ProggressId: 3
+  endgate: 0
 --- !u!61 &977679868
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3429,6 +3457,9 @@ MonoBehaviour:
   CamBack: {fileID: 0}
   AfterDialogue: {fileID: 0}
   Hidout: {fileID: 0}
+  GivesProgress: 0
+  ProgressId: 0
+  minDisplayTime: 0.01
 --- !u!61 &995810781
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3624,6 +3655,9 @@ MonoBehaviour:
   CamBack: {fileID: 1489573474}
   AfterDialogue: {fileID: 1085940688}
   Hidout: {fileID: 1428615848}
+  GivesProgress: 0
+  ProgressId: 0
+  minDisplayTime: 0.01
 --- !u!1 &1085940686
 GameObject:
   m_ObjectHideFlags: 0
@@ -3694,6 +3728,9 @@ MonoBehaviour:
   CamBack: {fileID: 0}
   AfterDialogue: {fileID: 0}
   Hidout: {fileID: 0}
+  GivesProgress: 0
+  ProgressId: 0
+  minDisplayTime: 0.01
 --- !u!1 &1101729133
 GameObject:
   m_ObjectHideFlags: 0
@@ -3793,6 +3830,7 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 0
   ProggressId: 1
+  endgate: 0
 --- !u!212 &1101729137
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4141,6 +4179,9 @@ MonoBehaviour:
   CamBack: {fileID: 0}
   AfterDialogue: {fileID: 0}
   Hidout: {fileID: 0}
+  GivesProgress: 0
+  ProgressId: 0
+  minDisplayTime: 0.01
 --- !u!1 &1428615845
 GameObject:
   m_ObjectHideFlags: 0
@@ -4550,6 +4591,7 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 0
   ProggressId: 1
+  endgate: 0
 --- !u!212 &1515579774
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4713,6 +4755,7 @@ MonoBehaviour:
   IsProgressable: 1
   ItemProgressId: 1
   BrakeOnUse: 0
+  TurnOnOnCollect: {fileID: 0}
 --- !u!61 &1572345088
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4743,7 +4786,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -5492,6 +5535,9 @@ MonoBehaviour:
   CamBack: {fileID: 1489573474}
   AfterDialogue: {fileID: 1085940688}
   Hidout: {fileID: 1428615848}
+  GivesProgress: 0
+  ProgressId: 0
+  minDisplayTime: 0.01
 --- !u!1 &1971285077
 GameObject:
   m_ObjectHideFlags: 0
@@ -5591,6 +5637,7 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 0
   ProggressId: 1
+  endgate: 0
 --- !u!212 &1971285081
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5904,9 +5951,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 906441314}
   - {fileID: 1112140992}
-  - {fileID: 1834947556}
   - {fileID: 2078259909}
   - {fileID: 1747043675}
+  - {fileID: 1834947556}
   - {fileID: 1736404291}
   - {fileID: 947870159}
   - {fileID: 1636251493}

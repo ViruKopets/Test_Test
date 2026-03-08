@@ -214,6 +214,8 @@ MonoBehaviour:
   Gm: {fileID: 0}
   NextScenePosId: 4
   LoadByTrigger: 1
+  ByProgress: 0
+  ProgressCheck: 0
   MenuLoad: 0
   Time: 1
   BlackPanel: {fileID: 0}
@@ -719,6 +721,8 @@ MonoBehaviour:
   CamBack: {fileID: 0}
   AfterDialogue: {fileID: 0}
   Hidout: {fileID: 0}
+  GivesProgress: 1
+  ProgressId: 6
 --- !u!1 &609102636
 GameObject:
   m_ObjectHideFlags: 0
@@ -1223,6 +1227,8 @@ MonoBehaviour:
   Gm: {fileID: 0}
   NextScenePosId: 4
   LoadByTrigger: 0
+  ByProgress: 0
+  ProgressCheck: 0
   MenuLoad: 0
   Time: 1
   BlackPanel: {fileID: 0}

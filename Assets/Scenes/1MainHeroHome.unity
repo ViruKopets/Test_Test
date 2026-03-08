@@ -191,6 +191,9 @@ MonoBehaviour:
   CamBack: {fileID: 0}
   AfterDialogue: {fileID: 0}
   Hidout: {fileID: 0}
+  GivesProgress: 0
+  ProgressId: 0
+  minDisplayTime: 0.01
 --- !u!61 &52407834
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -604,6 +607,7 @@ MonoBehaviour:
   IsProgressable: 0
   ItemProgressId: 0
   BrakeOnUse: 1
+  TurnOnOnCollect: {fileID: 0}
 --- !u!1 &189473461
 GameObject:
   m_ObjectHideFlags: 0
@@ -2012,6 +2016,7 @@ MonoBehaviour:
   IsProgressable: 0
   ItemProgressId: 0
   BrakeOnUse: 1
+  TurnOnOnCollect: {fileID: 0}
 --- !u!1 &1129696250
 GameObject:
   m_ObjectHideFlags: 0
@@ -2165,6 +2170,9 @@ MonoBehaviour:
   Gm: {fileID: 1544221800}
   NextScenePosId: 2
   LoadByTrigger: 1
+  ByProgress: 0
+  ProgressCheck: 0
+  NotYetDialigue: {fileID: 0}
   MenuLoad: 0
   Time: 1
   BlackPanel: {fileID: 1772845366}
@@ -2532,6 +2540,7 @@ MonoBehaviour:
   IsProgressable: 0
   ItemProgressId: 0
   BrakeOnUse: 1
+  TurnOnOnCollect: {fileID: 0}
 --- !u!61 &1399110220
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2622,8 +2631,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22308de6b26d6904f8fb1901d1930c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Progress: 000000000000
+  Progress: 0000000000000000
   ItemProgress: 0000000000
+  PicIndex: 0
+  PicIndex2: 0
 --- !u!1 &1603132217
 GameObject:
   m_ObjectHideFlags: 0
@@ -2970,6 +2981,7 @@ MonoBehaviour:
   IsProgressable: 0
   ItemProgressId: 0
   BrakeOnUse: 1
+  TurnOnOnCollect: {fileID: 0}
 --- !u!1 &2051408722
 GameObject:
   m_ObjectHideFlags: 0

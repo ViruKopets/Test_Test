@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Chest : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Chest : MonoBehaviour
     [SerializeField] GameObject TurnOff;
     [SerializeField] bool IsProgress;
     [SerializeField] int ProggressId;
+
+    [SerializeField] bool endgate;
     public string PassInfo()
     {
         return ItemsPurp;
@@ -27,6 +30,19 @@ public class Chest : MonoBehaviour
         if (TurnOn != null)
         {
             TurnOn.SetActive(true);
+        }
+        if (endgate)
+        {
+            GameObject[] objects = GameObject.FindGameObjectsWithTag("GameManager");
+            if (objects[0].GetComponent<GameManager>().IsGoodEnding())
+            {
+                SceneManager.LoadScene("GoodEnding");
+            }
+            else
+            {
+                SceneManager.LoadScene("BadEnding");
+            }
+
         }
         if (Delete) Destroy(this.gameObject);
     }

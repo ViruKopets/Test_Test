@@ -29,6 +29,15 @@ public class Bootstraper : MonoBehaviour
         {
             Dialogs[0].ActivateDialogue();
         }
+        if (Gm.CheckProgress(6)&&PosId==4)
+        {
+            Dialogs[1].ActivateDialogue();
+        }
+    }
+
+    public void TurnOnDialog(int Index)
+    {
+        Dialogs[Index].ActivateDialogue();
     }
 
     public void TurnOffProgress()

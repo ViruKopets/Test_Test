@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Xml.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,10 +32,15 @@ public class DialogueScr : MonoBehaviour
     [SerializeField] CameraChange CamBack;
     [SerializeField] DialogueScr AfterDialogue;
     [SerializeField] HidingSpot Hidout;
+    [SerializeField] bool GivesProgress = false;
+    [SerializeField] int ProgressId;
+    [SerializeField] float minDisplayTime = 0.01f;
 
     bool Active;
     int Index = 0;
     Coroutine WordAppCor;
+    private float currentPhraseStartTime;
+    private bool canSkip = false;
 
     private void Start()
     {
@@ -59,9 +63,7 @@ public class DialogueScr : MonoBehaviour
         WordPlace.text = "";
         //WordPlace.text = Words[Index];
         NamePlace.text = Names[Index];
-        WordAppCor = StartCoroutine(WordAppear(0));
         Index = Index + 1;
-        Active = true;
         if (Invent == null)
         {
             GameObject[] objects = GameObject.FindGameObjectsWithTag("Inventory");
@@ -69,11 +71,24 @@ public class DialogueScr : MonoBehaviour
         }
         Invent.SetVisuals(false);
         Pla.IsFreezed(true);
+        WordAppCor = StartCoroutine(WordAppear(0));
+        canSkip = false;
+        currentPhraseStartTime = Time.time;
+        Active = true;
     }
 
     private void Update()
     {
         if (!Active) return;
+        if (!canSkip && Time.time - currentPhraseStartTime >= minDisplayTime)
+        {
+            canSkip = true;
+        }
+        if (!canSkip)
+        {
+            return;
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             if (WordAppCor != null)
@@ -98,6 +113,12 @@ public class DialogueScr : MonoBehaviour
 
     void DialogueDone()
     {
+        if (GivesProgress)
+        {
+            GameObject[] objects = GameObject.FindGameObjectsWithTag("GameManager");
+            GameManager Gm = objects[0].GetComponent<GameManager>();
+            Gm.Progressed(ProgressId);
+        }
         Index = 0;
         Active = false;
         DialoguePanel.SetActive(false);

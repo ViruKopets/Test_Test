@@ -35,9 +35,15 @@ public class GameManager : MonoBehaviour
         if (SceneName == "2City")
         {
             Boot.SetPlayerPos(GoesTo);
-            if (Progress[0])
+            bool GoneFurther = (Progress[1] || Progress[2] || Progress[3] || Progress[4] || Progress[5]);
+            if (Progress[0] && !GoneFurther)
             {
-                Boot.TurnOnObjByProgress();
+                Boot.TurnOnById(0);
+            }
+            if (Progress[6])
+            {
+                Boot.TurnOffById(0);
+                Boot.TurnOnById(1);
             }
         }
         else if (SceneName == "3Forest")
@@ -90,7 +96,16 @@ public class GameManager : MonoBehaviour
         }
         else if (SceneName == "6GranHouse")
         {
-
+            if (!ItemProgress[2])
+            {
+                Boot.TurnOnById(0);
+                Boot.TurnOnDialog(0);
+            }
+            else
+            {
+                Boot.TurnOnById(1);
+                Boot.TurnOnDialog(1);
+            }
         }
     }
 
@@ -107,5 +122,23 @@ public class GameManager : MonoBehaviour
     public void SetEnding(bool IsGood)
     {
         GoodEnding = IsGood;
+    }
+
+    public bool CheckProgress(int Index)
+    {
+        if (Index == 1)
+        {
+            bool GoneFurther = (Progress[1] || Progress[2] || Progress[3] || Progress[4] || Progress[5]);
+            return GoneFurther;
+        }
+        else
+        {
+            return Progress[Index];
+        }
+    }
+
+    public bool IsGoodEnding()
+    {
+        return GoodEnding;
     }
 }
