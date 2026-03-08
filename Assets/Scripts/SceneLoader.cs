@@ -19,7 +19,7 @@ public class SceneLoader : MonoBehaviour
 
     private void Start()
     {
-        if (Gm == null)
+        if (Gm == null && !MenuLoad)
         {
             GameObject[] objects = GameObject.FindGameObjectsWithTag("GameManager");
             Gm = objects[0].GetComponent<GameManager>();
@@ -47,6 +47,14 @@ public class SceneLoader : MonoBehaviour
                 }
             }
             Gm.SetTransitionInfo(NextScenePosId);
+            if (SceneName == "0MainMenu")
+            {
+                GameObject[] objects = GameObject.FindGameObjectsWithTag("GameManager");
+                Destroy(objects[0]);
+                objects = GameObject.FindGameObjectsWithTag("InventoryCanvas");
+                Destroy(objects[0]);
+
+            }
             SceneManager.LoadScene(SceneName);
         }
     }
@@ -61,5 +69,10 @@ public class SceneLoader : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (LoadByTrigger) LoadScene();
+    }
+
+    public void QuitBut()
+    {
+        Application.Quit();
     }
 }

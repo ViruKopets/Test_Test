@@ -138,6 +138,14 @@ MonoBehaviour:
   Invent: {fileID: 0}
   Pla: {fileID: 0}
   MommyAnimator: {fileID: 0}
+  FreezeAfter: 0
+  ShoudKick: 0
+  CamBack: {fileID: 0}
+  AfterDialogue: {fileID: 0}
+  Hidout: {fileID: 0}
+  GivesProgress: 0
+  ProgressId: 0
+  minDisplayTime: 0.01
 --- !u!1 &2965702951035344715
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +372,7 @@ GameObject:
   - component: {fileID: 4599777420308680400}
   - component: {fileID: 6396514832948498850}
   - component: {fileID: 2353098814959043117}
+  - component: {fileID: 8871659903230021566}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -472,7 +481,41 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6396514832948498850}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8871659903230021566}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8871659903230021566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4297811315454783994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5d5b3001a50ee459c99a9ab1514991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: 0MainMenu
+  Gm: {fileID: 0}
+  NextScenePosId: 0
+  LoadByTrigger: 0
+  ByProgress: 0
+  ProgressCheck: 0
+  NotYetDialigue: {fileID: 0}
+  MenuLoad: 0
+  Time: 1
+  BlackPanel: {fileID: 2965702951035344715}
 --- !u!1 &6079794763912297096
 GameObject:
   m_ObjectHideFlags: 0

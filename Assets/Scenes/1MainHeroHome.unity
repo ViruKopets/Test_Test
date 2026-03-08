@@ -762,6 +762,7 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 0
   ProggressId: 0
+  endgate: 0
 --- !u!114 &254768588 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3277436510766193722, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
@@ -3748,10 +3749,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 254768588}
     - target: {fileID: 1806978606130606109, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
-      propertyPath: ShoudKick
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1806978606130606109, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: MommyAnimator
       value: 
       objectReference: {fileID: 885366938}
@@ -3759,6 +3756,10 @@ PrefabInstance:
       propertyPath: 'ObjToOn.Array.data[0]'
       value: 
       objectReference: {fileID: 2094829692}
+    - target: {fileID: 8871659903230021566, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: Gm
+      value: 
+      objectReference: {fileID: 1544221800}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

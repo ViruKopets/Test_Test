@@ -439,6 +439,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: 1MainHeroHome
+  Gm: {fileID: 0}
+  NextScenePosId: 0
+  LoadByTrigger: 1
+  ByProgress: 0
+  ProgressCheck: 0
+  NotYetDialigue: {fileID: 0}
   MenuLoad: 1
   Time: 1
   BlackPanel: {fileID: 865932441}
@@ -1339,7 +1345,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1934335519}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 414946723}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: QuitBut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1934335519
 MonoBehaviour:
   m_ObjectHideFlags: 0
