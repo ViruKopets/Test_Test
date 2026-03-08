@@ -256,8 +256,8 @@ MonoBehaviour:
   DialogueToActivate: {fileID: 0}
   TurnOn: {fileID: 1101729133}
   TurnOff: {fileID: 0}
-  IsProgress: 0
-  ProggressId: 0
+  IsProgress: 1
+  ProggressId: 2
 --- !u!61 &70434631
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1321,8 +1321,8 @@ MonoBehaviour:
   DialogueToActivate: {fileID: 0}
   TurnOn: {fileID: 1971285077}
   TurnOff: {fileID: 0}
-  IsProgress: 0
-  ProggressId: 0
+  IsProgress: 1
+  ProggressId: 4
 --- !u!61 &416423758
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1655,6 +1655,7 @@ MonoBehaviour:
   SceneName: 2City
   Gm: {fileID: 0}
   NextScenePosId: 3
+  LoadByTrigger: 0
   MenuLoad: 0
   Time: 1
   BlackPanel: {fileID: 0}
@@ -2029,8 +2030,8 @@ MonoBehaviour:
   DialogueToActivate: {fileID: 0}
   TurnOn: {fileID: 749053178}
   TurnOff: {fileID: 0}
-  IsProgress: 0
-  ProggressId: 0
+  IsProgress: 1
+  ProggressId: 1
 --- !u!1 &672605163
 GameObject:
   m_ObjectHideFlags: 0
@@ -2280,8 +2281,8 @@ MonoBehaviour:
   DialogueToActivate: {fileID: 0}
   TurnOn: {fileID: 326549810}
   TurnOff: {fileID: 0}
-  IsProgress: 0
-  ProggressId: 0
+  IsProgress: 1
+  ProggressId: 5
 --- !u!61 &707889847
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3254,8 +3255,8 @@ MonoBehaviour:
   DialogueToActivate: {fileID: 0}
   TurnOn: {fileID: 1515579770}
   TurnOff: {fileID: 0}
-  IsProgress: 0
-  ProggressId: 0
+  IsProgress: 1
+  ProggressId: 3
 --- !u!61 &977679868
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4021,8 +4022,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dialogs:
   - {fileID: 0}
-  ObjToOff: []
-  ObjToOn: []
+  ObjToOff:
+  - {fileID: 586209636}
+  - {fileID: 70434627}
+  - {fileID: 977679864}
+  - {fileID: 416423754}
+  - {fileID: 707889843}
+  ObjToOn:
+  - {fileID: 526232266}
+  - {fileID: 749053178}
+  - {fileID: 1101729133}
+  - {fileID: 1515579770}
+  - {fileID: 1971285077}
+  - {fileID: 326549810}
   ItemObjToOff:
   - {fileID: 1572345086}
   PlayersPos: []
@@ -4697,8 +4709,8 @@ MonoBehaviour:
   MyPic: {fileID: 21300000, guid: 7b9beee627c40d041a0140bde0ef066b, type: 3}
   MyPurpose: Scissors
   BackArrow: {fileID: 0}
-  IsProgressable: 0
-  ItemProgressId: 0
+  IsProgressable: 1
+  ItemProgressId: 1
   BrakeOnUse: 0
 --- !u!61 &1572345088
 BoxCollider2D:
@@ -5375,7 +5387,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.0134, y: 0.0403, z: 0}
-  m_LocalScale: {x: 17.751667, y: 9.953581, z: 1}
+  m_LocalScale: {x: 18, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

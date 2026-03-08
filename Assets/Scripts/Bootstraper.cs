@@ -53,4 +53,13 @@ public class Bootstraper : MonoBehaviour
             ObjToOn[i].SetActive(true);
         }
     }
+    public void TurnOnById(int Index)
+    {
+        ObjToOff[Index].SetActive(true);
+    }
+    public void TurnOffById(int Index)
+    {
+        ObjToOn[Index].SetActive(false);
+
+    }
 }

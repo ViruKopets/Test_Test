@@ -7,6 +7,7 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] string SceneName;
     [SerializeField] GameManager Gm;
     [SerializeField] int NextScenePosId;
+    [SerializeField] bool LoadByTrigger = true;
 
     [Header("First Menu Load")]
     [SerializeField] bool MenuLoad = false;
@@ -29,6 +30,11 @@ public class SceneLoader : MonoBehaviour
         }
         else
         {
+            if (Gm == null)
+            {
+                GameObject[] objects = GameObject.FindGameObjectsWithTag("GameManager");
+                Gm = objects[0].GetComponent<GameManager>();
+            }
             Gm.SetTransitionInfo(NextScenePosId);
             SceneManager.LoadScene(SceneName);
         }
@@ -43,6 +49,6 @@ public class SceneLoader : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        LoadScene();
+        if (LoadByTrigger) LoadScene();
     }
 }

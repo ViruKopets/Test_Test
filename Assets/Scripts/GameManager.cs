@@ -51,7 +51,36 @@ public class GameManager : MonoBehaviour
         }
         else if (SceneName == "4Hostel")
         {
-
+            if (ItemProgress[1])
+            {
+                Boot.TurnOffItems();
+            }
+            if (Progress[1])
+            {
+                Boot.TurnOnById(0);
+                Boot.TurnOnById(1);
+                Boot.TurnOffById(0);
+            }
+            if (Progress[2])
+            {
+                Boot.TurnOnById(2);
+                Boot.TurnOffById(1);
+            }
+            if (Progress[3])
+            {
+                Boot.TurnOnById(3);
+                Boot.TurnOffById(2);
+            }
+            if (Progress[4])
+            {
+                Boot.TurnOnById(4);
+                Boot.TurnOffById(3);
+            }
+            if (Progress[5])
+            {
+                Boot.TurnOnById(5);
+                Boot.TurnOffById(4);
+            }
         }
         else if (SceneName == "5Bar")
         {
