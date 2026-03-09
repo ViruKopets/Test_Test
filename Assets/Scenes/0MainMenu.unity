@@ -446,7 +446,7 @@ MonoBehaviour:
   ProgressCheck: 0
   NotYetDialigue: {fileID: 0}
   MenuLoad: 1
-  Time: 1
+  Time: 15
   BlackPanel: {fileID: 865932441}
 --- !u!4 &414946724
 Transform:
@@ -1160,8 +1160,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.3755209, y: 0.41200003}
   m_AnchorMax: {x: 0.63279164, y: 0.5741111}
-  m_AnchoredPosition: {x: 2.6215973, y: 2.7255993}
-  m_SizeDelta: {x: -5.0923004, y: 3.5108986}
+  m_AnchoredPosition: {x: -5.1158, y: -29.5141}
+  m_SizeDelta: {x: 1021.4229, y: 480.6597}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1659295835
 MonoBehaviour:

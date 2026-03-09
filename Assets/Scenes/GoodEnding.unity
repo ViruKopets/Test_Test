@@ -119,6 +119,85 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &152939809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 152939812}
+  - component: {fileID: 152939811}
+  - component: {fileID: 152939810}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &152939810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152939809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
+--- !u!114 &152939811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152939809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &152939812
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152939809}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &325776237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -229,15 +308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4086535069622434652, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: m_text
-      value: "\u0417\u0432\u0443\u043A \u0421\u0438\u0440\u0435\u043D\n\n\u0414\u0432\u0435\u0440\u044C
-        \u0432\u044B\u043B\u0430\u043C\u044B\u0432\u0430\u044E\u0442. \u0412\u0445\u043E\u0434\u0438\u0442
-        \u0415\u0432\u0433\u0435\u043D\u0438\u044F, \u0437\u0430 \u043D\u0435\u0439
-        \u043F\u043E\u043B\u0438\u0446\u0435\u0439\u0441\u043A\u0438\u0435.\r\n\r\n\u0415\u0432\u0433\u0435\u043D\u0438\u044F:
-        \u0410\u043B\u0438\u0441\u0430! \u041B\u0443\u043A\u0430! \u0412\u044B \u0446\u0435\u043B\u044B?\r\n\r\n\u0415\u0432\u0433\u0435\u043D\u0438\u044F
-        \u043A\u0438\u0432\u0430\u0435\u0442, \u0441\u043C\u043E\u0442\u0440\u0438\u0442
-        \u043D\u0430 \u0410\u0433\u0430\u0442\u0443:  \u041A\u0440\u0438\u0441\u0442\u0430\u043B\u043E\u0432\u0430
-        \u0410\u0433\u0430\u0442\u0430, \u0432\u044B \u0430\u0440\u0435\u0441\u0442\u043E\u0432\u0430\u043D\u044B
-        \u0437\u0430 \u043F\u043E\u0445\u0438\u0449\u0435\u043D\u0438\u0435 \u0434\u0435\u0442\u0435\u0439."
+      value: "\u0442\u0435\u043A\u0441\u0442"
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1806978606130606109, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
@@ -285,10 +356,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 325776238}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.43935418, y: 0.3787778}
-  m_AnchorMax: {x: 0.5955417, y: 0.57585186}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.22183333, y: 0.27222222}
+  m_AnchorMax: {x: 0.83177084, y: 0.6904074}
+  m_AnchoredPosition: {x: 1, y: -4.5}
+  m_SizeDelta: {x: -11.13208, y: -12.031906}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &682533009
 MonoBehaviour:
@@ -310,9 +381,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Good ending
-
-'
+  m_text: "\u0417\u0432\u0443\u043A \u0421\u0438\u0440\u0435\u043D\n\n\u0414\u0432\u0435\u0440\u044C
+    \u0432\u044B\u043B\u0430\u043C\u044B\u0432\u0430\u044E\u0442. \u0412\u0445\u043E\u0434\u0438\u0442
+    \u0415\u0432\u0433\u0435\u043D\u0438\u044F, \u0437\u0430 \u043D\u0435\u0439 \u043F\u043E\u043B\u0438\u0446\u0435\u0439\u0441\u043A\u0438\u0435.\r\n\r\n\u0415\u0432\u0433\u0435\u043D\u0438\u044F:
+    \u0410\u043B\u0438\u0441\u0430! \u041B\u0443\u043A\u0430! \u0412\u044B \u0446\u0435\u043B\u044B?\r\n\r\n\u0415\u0432\u0433\u0435\u043D\u0438\u044F
+    \u043A\u0438\u0432\u0430\u0435\u0442, \u0441\u043C\u043E\u0442\u0440\u0438\u0442
+    \u043D\u0430 \u0410\u0433\u0430\u0442\u0443:  \u041A\u0440\u0438\u0441\u0442\u0430\u043B\u043E\u0432\u0430
+    \u0410\u0433\u0430\u0442\u0430, \u0432\u044B \u0430\u0440\u0435\u0441\u0442\u043E\u0432\u0430\u043D\u044B
+    \u0437\u0430 \u043F\u043E\u0445\u0438\u0449\u0435\u043D\u0438\u0435 \u0434\u0435\u0442\u0435\u0439."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -339,7 +415,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 42.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -489,3 +565,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 781425199}
   - {fileID: 325776237}
+  - {fileID: 152939812}
