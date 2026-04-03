@@ -150,3 +150,8 @@ MonoBehaviour:
   Invent: {fileID: 0}
   MyPic: {fileID: 21300000, guid: 7059b9b70b139f14c94921b0e1345b6b, type: 3}
   MyPurpose: Purple
+  BackArrow: {fileID: 0}
+  IsProgressable: 0
+  ItemProgressId: 0
+  BrakeOnUse: 1
+  TurnOnOnCollect: {fileID: 0}

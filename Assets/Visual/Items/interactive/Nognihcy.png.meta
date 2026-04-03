@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1c6ef32c2973a3b458c1a0d6971f4c47
+guid: c8459a3ec6e9d564ab37bb355d6f8d04
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4840601546650711392
-    second: "\u043F\u0438\u0440\u043E\u0433_0"
+      213: -1501288187472232433
+    second: Nognihcy_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u043F\u0438\u0440\u043E\u0433_0"
+      name: Nognihcy_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 471
-        width: 1023
-        height: 665
+        y: 0
+        width: 799
+        height: 1205
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0657257c5754d2340800000000000000
-      internalID: 4840601546650711392
+      spriteID: f004a30095a5a2be0800000000000000
+      internalID: -1501288187472232433
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 809b17012509f3141b0dd74970d35a1e
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u043F\u0438\u0440\u043E\u0433_0": 4840601546650711392
+      Nognihcy_0: -1501288187472232433
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
