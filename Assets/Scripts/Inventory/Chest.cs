@@ -31,6 +31,10 @@ public class Chest : MonoBehaviour
         {
             TurnOn.SetActive(true);
         }
+        if (TurnOff != null)
+        {
+            TurnOff.SetActive(false);
+        }
         if (endgate)
         {
             GameObject[] objects = GameObject.FindGameObjectsWithTag("GameManager");

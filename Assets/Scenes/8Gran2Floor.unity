@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Invent: {fileID: 0}
-  MyPic: {fileID: 21300000, guid: 12f0c30f2a17daf4d849cb4ffb8c7aaa, type: 3}
+  MyPic: {fileID: 21300000, guid: d17d3d2186c14d144b26fd4395b44b2a, type: 3}
   MyPurpose: Melki
   BackArrow: {fileID: 0}
   IsProgressable: 0
@@ -376,7 +376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Invent: {fileID: 0}
-  MyPic: {fileID: -7318882552322054817, guid: 2812340d8f5fcff49a7532332ca3fa6a, type: 3}
+  MyPic: {fileID: 21300000, guid: 3ca5f66f9a2604b4398fed2e09ef2d94, type: 3}
   MyPurpose: Spoon
   BackArrow: {fileID: 0}
   IsProgressable: 0
@@ -417,7 +417,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.066135526, y: -0.014726877}
+  m_Offset: {x: 0.21320963, y: -0.014726639}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -427,7 +427,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.7908986, y: 14.024181}
+  m_Size: {x: 8.961747, y: 14.024181}
   m_EdgeRadius: 0
 --- !u!1 &229209049
 GameObject:
@@ -455,7 +455,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229209049}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -512,7 +512,7 @@ Transform:
   m_GameObject: {fileID: 229209049}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.27467, y: -0.20325, z: 0}
+  m_LocalPosition: {x: -0.2943, y: -0.2, z: 0}
   m_LocalScale: {x: 0.033122115, y: 0.08416173, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -572,7 +572,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.056549072, y: -0.80782557}
+  m_Offset: {x: -0.056549072, y: -0.6187194}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -582,7 +582,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 11.0657425, y: 3.6820793}
+  m_Size: {x: 11.0657425, y: 5.129716}
   m_EdgeRadius: 0
 --- !u!1 &353518344
 GameObject:
@@ -1047,7 +1047,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -1.6045713, y: -0.61044693}
+  m_Offset: {x: 0.58174896, y: -0.031714916}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1057,7 +1057,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 29.963877, y: 21.098953}
+  m_Size: {x: 30.588543, y: 22.256416}
   m_EdgeRadius: 0
 --- !u!1 &552500935
 GameObject:
@@ -2231,7 +2231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Invent: {fileID: 0}
-  MyPic: {fileID: 21300000, guid: c200db7da781b864dbe9bcd6c561f8a1, type: 3}
+  MyPic: {fileID: 21300000, guid: 553c5858f88beb347983e6eac00ea22e, type: 3}
   MyPurpose: sos
   BackArrow: {fileID: 0}
   IsProgressable: 0
