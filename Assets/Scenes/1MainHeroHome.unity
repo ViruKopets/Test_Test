@@ -688,7 +688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Invent: {fileID: 0}
-  MyPic: {fileID: -646644276480752141, guid: c40c017afabcf884ba179dde52aebe87, type: 3}
+  MyPic: {fileID: 21300000, guid: abd9a4d0be341f6448821d2cf189fcee, type: 3}
   MyPurpose: WrYellow
   BackArrow: {fileID: 0}
   IsProgressable: 0
@@ -1430,8 +1430,8 @@ Camera:
   m_GameObject: {fileID: 811943659}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2302,7 +2302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Invent: {fileID: 0}
-  MyPic: {fileID: -4393613054024341070, guid: 8e72bd6ef1b3eb64db423414b3886446, type: 3}
+  MyPic: {fileID: 21300000, guid: 4a81d3215a92e1142b2986b1ebd85b26, type: 3}
   MyPurpose: WrGreen
   BackArrow: {fileID: 0}
   IsProgressable: 0
@@ -2913,7 +2913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Invent: {fileID: 0}
-  MyPic: {fileID: 7778576681205004552, guid: 24b650ea403d0594284125bc3949b8d0, type: 3}
+  MyPic: {fileID: 21300000, guid: 8a3fe6369253c614d9e04caf1b99f4e1, type: 3}
   MyPurpose: WrRed
   BackArrow: {fileID: 0}
   IsProgressable: 0
@@ -3354,7 +3354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Invent: {fileID: 0}
-  MyPic: {fileID: -195513891084109598, guid: 439009f5c2d48844781badd2b3882445, type: 3}
+  MyPic: {fileID: 21300000, guid: 6c13a3a9b0299ed4981f1f5aba32ee39, type: 3}
   MyPurpose: BlueLock
   BackArrow: {fileID: 0}
   IsProgressable: 0
