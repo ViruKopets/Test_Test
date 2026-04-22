@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6c05e527691ea91418292afff0ebe827
+guid: de9c2fabe5e14714b98eac32230e69c8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5408401542877664390
-    second: "\u043C\u0430\u043C\u0430_\u0440\u0435\u043D\u0434\u0435\u0440_0"
+      213: 7828868780527428708
+    second: ExitButtom_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u043C\u0430\u043C\u0430_\u0440\u0435\u043D\u0434\u0435\u0440_0"
+      name: ExitButtom_0
       rect:
         serializedVersion: 2
-        x: 108
-        y: 1324
-        width: 363
-        height: 385
+        x: 0
+        y: 0
+        width: 418
+        height: 132
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a7b2a12a37f71f4b0800000000000000
-      internalID: -5408401542877664390
+      spriteID: 464ab704daab5ac60800000000000000
+      internalID: 7828868780527428708
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 05732f5e5974ea14fa53444e00bad886
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u043C\u0430\u043C\u0430_\u0440\u0435\u043D\u0434\u0435\u0440_0": -5408401542877664390
+      ExitButtom_0: 7828868780527428708
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

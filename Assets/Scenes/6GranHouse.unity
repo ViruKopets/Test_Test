@@ -225,8 +225,9 @@ MonoBehaviour:
   NamePlace: {fileID: 1358912439}
   DialoguePanel: {fileID: 1358912438}
   Imgs:
-  - {fileID: 21300000, guid: 4b4eefab8b8cff244b63af122da2dca2, type: 3}
-  - {fileID: 21300000, guid: 4b4eefab8b8cff244b63af122da2dca2, type: 3}
+  - {fileID: -3315500134659360109, guid: 7710b15366ac8644184c661349f56ce7, type: 3}
+  - {fileID: -3315500134659360109, guid: 7710b15366ac8644184c661349f56ce7, type: 3}
+  - {fileID: -3315500134659360109, guid: 7710b15366ac8644184c661349f56ce7, type: 3}
   Words:
   - "\u0422\u0435\u043F\u0435\u0440\u044C \u0442\u044B \u0437\u043D\u0430\u0435\u0448\u044C
     \u0441\u043B\u0438\u0448\u043A\u043E\u043C \u043C\u043D\u043E\u0433\u043E"
@@ -1194,7 +1195,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -3315500134659360109, guid: dbbac53fb85163c488e35da0e2bd0264, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1214,8 +1215,8 @@ Transform:
   m_GameObject: {fileID: 947001910}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.84, y: -1.66, z: 0}
-  m_LocalScale: {x: 1, y: 3.3391063, z: 1}
+  m_LocalPosition: {x: -4.9477, y: -1.8256, z: 0}
+  m_LocalScale: {x: 0.6954168, y: 0.59371096, z: 0.29289}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1616,6 +1617,22 @@ PrefabInstance:
       propertyPath: ObjToOn.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7797989587897713040, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_Color.a
+      value: 0.39215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797989587897713040, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797989587897713040, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797989587897713040, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1806978606130606109, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
     m_RemovedGameObjects: []
@@ -2000,13 +2017,69 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2299460207120663761, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
+      propertyPath: m_Size.x
+      value: 4.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299460207120663761, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
+      propertyPath: m_Size.y
+      value: 16.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2299460207120663761, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5510741715754306470, guid: 687c5f48e3c2d7a488924228a5b821f2, type: 3}
+    - target: {fileID: 2299460207120663761, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263803512974057780, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
+      propertyPath: m_Size.x
+      value: 5.0481563
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263803512974057780, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
+      propertyPath: m_Size.y
+      value: 16.966988
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263803512974057780, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.1819365
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263803512974057780, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.12912369
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263803512974057780, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 4.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263803512974057780, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 16.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263803512974057780, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263803512974057780, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 16.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160963616005735453, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.24263111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160963616005735453, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.23355539
+      objectReference: {fileID: 0}
     - target: {fileID: 6160963616005735453, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.05
+      value: -0.119
       objectReference: {fileID: 0}
     - target: {fileID: 6160963616005735453, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8003
+      value: -1.668
       objectReference: {fileID: 0}
     - target: {fileID: 6160963616005735453, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2343,7 +2416,8 @@ MonoBehaviour:
   NamePlace: {fileID: 1358912439}
   DialoguePanel: {fileID: 1358912438}
   Imgs:
-  - {fileID: 21300000, guid: 4b4eefab8b8cff244b63af122da2dca2, type: 3}
+  - {fileID: 5510741715754306470, guid: 2de49931e21311944a0d331a5aea3754, type: 3}
+  - {fileID: 5510741715754306470, guid: 2de49931e21311944a0d331a5aea3754, type: 3}
   Words:
   - "\u041A\u0430\u043A \u0441\u0442\u0440\u0430\u043D\u043D\u043E... \u043E\u0434\u043D\u0430
     \u043A\u0430\u0440\u0442\u0438\u043D\u043A\u0430 \u043F\u0435\u0440\u0435\u0432\u0435\u0440\u043D\u0443\u0442\u0430"
