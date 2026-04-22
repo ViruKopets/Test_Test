@@ -676,7 +676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6160963616005735453, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.19
+      value: -2.380322
       objectReference: {fileID: 0}
     - target: {fileID: 6160963616005735453, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1682,7 +1682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Invent: {fileID: 0}
-  MyPic: {fileID: 6299155637328772919, guid: e88a53685b10aab418c7810c29858b74, type: 3}
+  MyPic: {fileID: 21300000, guid: 67c5cdf2f79b0f24c9f6f7106a41b9a7, type: 3}
   MyPurpose: Compas
   BackArrow: {fileID: 2091234544}
   IsProgressable: 1
