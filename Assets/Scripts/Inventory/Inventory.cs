@@ -19,11 +19,9 @@ public class Inventory : MonoBehaviour
         if (objects.Length > 1)
         {
             Destroy(Canvasik);
+            return;
         }
-        else
-        {
-            DontDestroyOnLoad(Canvasik);
-        }
+        DontDestroyOnLoad(Canvasik);
     }
     public void TakeNewItem(Sprite NewPic, string Purpose, PickupItem Item, bool IsBrakeOnUse)
     {

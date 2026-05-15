@@ -17,12 +17,10 @@ public class GameManager : MonoBehaviour
         GameObject[] objects = GameObject.FindGameObjectsWithTag("GameManager");
         if (objects.Length > 1)
         {
-            Destroy(objects[1]);
+            Destroy(this.gameObject);
+            return;
         }
-        else
-        {
-            DontDestroyOnLoad(this.gameObject);
-        }
+        DontDestroyOnLoad(this.gameObject);
     }
 
     public void SetTransitionInfo(int PosId)

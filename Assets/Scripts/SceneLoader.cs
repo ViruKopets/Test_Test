@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -14,7 +15,8 @@ public class SceneLoader : MonoBehaviour
 
     [Header("First Menu Load")]
     [SerializeField] bool MenuLoad = false;
-    [SerializeField] float Time = 1f;
+    [FormerlySerializedAs("Time")]
+    [SerializeField] float MenuLoadDelay = 1f;
     [SerializeField] GameObject BlackPanel;
 
     private void Start()
@@ -50,9 +52,9 @@ public class SceneLoader : MonoBehaviour
             if (SceneName == "0MainMenu")
             {
                 GameObject[] objects = GameObject.FindGameObjectsWithTag("GameManager");
-                Destroy(objects[0]);
+                if (objects.Length > 0) Destroy(objects[0]);
                 objects = GameObject.FindGameObjectsWithTag("InventoryCanvas");
-                Destroy(objects[0]);
+                if (objects.Length > 0) Destroy(objects[0]);
 
             }
             SceneManager.LoadScene(SceneName);
@@ -62,7 +64,7 @@ public class SceneLoader : MonoBehaviour
     IEnumerator MenuPanel()
     {
         BlackPanel.SetActive(true);
-        yield return new WaitForSeconds(Time);
+        yield return new WaitForSeconds(MenuLoadDelay);
         SceneManager.LoadScene(SceneName);
     }
 
