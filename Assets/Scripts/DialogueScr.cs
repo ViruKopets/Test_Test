@@ -137,10 +137,9 @@ public class DialogueScr : MonoBehaviour
         }
         if (ShoudKick)
         {
-            CamBack.ChangeCamera();
-            AfterDialogue.ActivateDialogue();
-            Hidout.CanHide = true;
-
+            if (CamBack != null) CamBack.ChangeCamera();
+            if (AfterDialogue != null) AfterDialogue.ActivateDialogue();
+            if (Hidout != null) Hidout.CanHide = true;
         }
         if (ObjToOff != null)
         {

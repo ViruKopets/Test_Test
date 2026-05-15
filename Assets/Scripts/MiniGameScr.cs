@@ -112,8 +112,9 @@ public class MiniGameScr : MonoBehaviour
 
         PickedIndex1 = Gm.PicIndex;
         PickedIndex2 = Gm.PicIndex2;
-        Pics[PickedIndex1].transform.position = FPlace.position;
-        Pics[PickedIndex2].transform.position = SPlace.position;
-
+        if (PickedIndex1 >= 0 && PickedIndex1 < Pics.Count)
+            Pics[PickedIndex1].transform.position = FPlace.position;
+        if (PickedIndex2 >= 0 && PickedIndex2 < Pics.Count)
+            Pics[PickedIndex2].transform.position = SPlace.position;
     }
 }

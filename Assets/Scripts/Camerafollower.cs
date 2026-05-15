@@ -9,18 +9,12 @@ public class Camerafollower : MonoBehaviour
     Vector3 RightVector;
     void Update()
     {
-        if (Target.transform.position.x + Offset.x < LeftX)
-        {
-            RightVector = new Vector3(LeftX, Target.transform.position.y + Offset.y, Target.transform.position.z + Offset.z);
-        }
-        else if (Target.transform.position.x + Offset.x > RightX)
-        {
-            RightVector = new Vector3(RightX, Target.transform.position.y + Offset.y, Target.transform.position.z + Offset.z);
-        }
-        else
-        {
-            RightVector = new Vector3(Target.transform.position.x + Offset.x, Target.transform.position.y + Offset.y, Target.transform.position.z + Offset.z);
-        }
-        this.gameObject.transform.position = RightVector;
+        if (Target == null) return;
+        Vector3 tp = Target.transform.position;
+        float x = tp.x + Offset.x;
+        if (x < LeftX) x = LeftX;
+        else if (x > RightX) x = RightX;
+        RightVector = new Vector3(x, tp.y + Offset.y, tp.z + Offset.z);
+        transform.position = RightVector;
     }
 }
