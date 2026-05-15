@@ -18,6 +18,7 @@ public class Bootstraper : MonoBehaviour
     public void Start()
     {
         GameObject[] objects = GameObject.FindGameObjectsWithTag("GameManager");
+        if (objects.Length == 0) return;
         Gm = objects[0].GetComponent<GameManager>();
         Gm.TakeInfo(this, SceneName);
     }

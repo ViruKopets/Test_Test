@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/0MainMenu.unity
     guid: 2dbb0ccba510f6243a96bed105677676
   - enabled: 1
+    path: Assets/Scenes/1aGrandHouseIntro.unity
+    guid: 7bfff578602fe7545beb0bab1f58547c
+  - enabled: 1
     path: Assets/Scenes/1MainHeroHome.unity
     guid: 95f4004633077554d93dffa156d0b3eb
   - enabled: 1

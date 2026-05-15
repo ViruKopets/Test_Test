@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DialogueScr : MonoBehaviour
@@ -35,6 +36,7 @@ public class DialogueScr : MonoBehaviour
     [SerializeField] bool GivesProgress = false;
     [SerializeField] int ProgressId;
     [SerializeField] float minDisplayTime = 0.01f;
+    [SerializeField] string LoadSceneAfter = "";
 
     bool Active;
     int Index = 0;
@@ -44,15 +46,19 @@ public class DialogueScr : MonoBehaviour
 
     private void Start()
     {
-        if (Invent == null)
-        {
-            GameObject[] objects = GameObject.FindGameObjectsWithTag("Inventory");
-            Invent = objects[0].GetComponent<Inventory>();
-        }
+        TryResolveInvent();
         if (ActivateOnStart)
         {
             ActivateDialogue();
         }
+    }
+
+    void TryResolveInvent()
+    {
+        if (Invent != null) return;
+        GameObject[] objects = GameObject.FindGameObjectsWithTag("Inventory");
+        if (objects.Length == 0) return;
+        Invent = objects[0].GetComponent<Inventory>();
     }
 
     public void ActivateDialogue()
@@ -64,13 +70,9 @@ public class DialogueScr : MonoBehaviour
         //WordPlace.text = Words[Index];
         NamePlace.text = Names[Index];
         Index = Index + 1;
-        if (Invent == null)
-        {
-            GameObject[] objects = GameObject.FindGameObjectsWithTag("Inventory");
-            Invent = objects[0].GetComponent<Inventory>();
-        }
-        Invent.SetVisuals(false);
-        Pla.IsFreezed(true);
+        TryResolveInvent();
+        if (Invent != null) Invent.SetVisuals(false);
+        if (Pla != null) Pla.IsFreezed(true);
         WordAppCor = StartCoroutine(WordAppear(0));
         canSkip = false;
         currentPhraseStartTime = Time.time;
@@ -129,8 +131,8 @@ public class DialogueScr : MonoBehaviour
                 ObjToOn[i].SetActive(true);
             }
         }
-        Invent.SetVisuals(true);
-        Pla.IsFreezed(FreezeAfter);
+        if (Invent != null) Invent.SetVisuals(true);
+        if (Pla != null) Pla.IsFreezed(FreezeAfter);
         if (MommyAnimator != null)
         {
             MommyAnimator.SetTrigger("Leave");
@@ -148,6 +150,10 @@ public class DialogueScr : MonoBehaviour
                 ObjToOff[i].SetActive(false);
             }
 
+        }
+        if (!string.IsNullOrEmpty(LoadSceneAfter))
+        {
+            SceneManager.LoadScene(LoadSceneAfter);
         }
     }
     IEnumerator WordAppear(int Ind)

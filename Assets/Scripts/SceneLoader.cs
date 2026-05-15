@@ -24,7 +24,7 @@ public class SceneLoader : MonoBehaviour
         if (Gm == null && !MenuLoad)
         {
             GameObject[] objects = GameObject.FindGameObjectsWithTag("GameManager");
-            Gm = objects[0].GetComponent<GameManager>();
+            if (objects.Length > 0) Gm = objects[0].GetComponent<GameManager>();
         }
     }
     public void LoadScene()
@@ -64,7 +64,17 @@ public class SceneLoader : MonoBehaviour
     IEnumerator MenuPanel()
     {
         BlackPanel.SetActive(true);
-        yield return new WaitForSeconds(MenuLoadDelay);
+        // Skip the frame the Play button was clicked on, otherwise the same
+        // mouse-down event would immediately end the wait below.
+        yield return null;
+
+        float elapsed = 0f;
+        while (elapsed < MenuLoadDelay)
+        {
+            if (Input.GetMouseButtonDown(0) || Input.anyKeyDown) break;
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
         SceneManager.LoadScene(SceneName);
     }
 

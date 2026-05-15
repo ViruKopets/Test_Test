@@ -19,7 +19,7 @@ public class MiniGameScr : MonoBehaviour
     private void Start()
     {
         GameObject[] objects = GameObject.FindGameObjectsWithTag("GameManager");
-        Gm = objects[0].GetComponent<GameManager>();
+        if (objects.Length > 0) Gm = objects[0].GetComponent<GameManager>();
     }
 
     private void Update()

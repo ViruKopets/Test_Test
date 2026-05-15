@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5d5b3001a50ee459c99a9ab1514991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: 1MainHeroHome
+  SceneName: 1aGrandHouseIntro
   Gm: {fileID: 0}
   NextScenePosId: 0
   LoadByTrigger: 1
