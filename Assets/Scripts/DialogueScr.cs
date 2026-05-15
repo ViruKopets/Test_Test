@@ -177,4 +177,9 @@ public class DialogueScr : MonoBehaviour
     {
         ShoudKick = false;
     }
+
+    public bool IsDialogueActive()
+    {
+        return DialoguePanel != null && DialoguePanel.activeSelf;
+    }
 }
