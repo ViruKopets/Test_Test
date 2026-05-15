@@ -12,17 +12,18 @@ public static class BuildNewspaperContent
     const string GeneratedRootName = "GeneratedText";
 
     // === Tweak these if text is too small / too big ===
-    const float TitleFontSize  = 3.5f;
-    const float BodyFontSize   = 2.5f;
-    const float AuthorFontSize = 2.2f;
+    const float TitleFontSize  = 1.6f;
+    const float BodyFontSize   = 2.0f;
+    const float AuthorFontSize = 1.3f;
     // Layout fractions of newspaper bounds (don't usually need to change)
-    const float InnerWidthFrac  = 0.85f;
-    const float InnerHeightFrac = 0.85f;
-    const float TitleWidthFrac  = 0.55f;   // leaves room for the photo on top-right
-    const float TitleYFrac      = 0.36f;
-    const float BodyHeightFrac  = 0.55f;
-    const float BodyYFrac       = -0.05f;
-    const float AuthorYFrac     = -0.45f;
+    const float InnerWidthFrac   = 0.86f;
+    const float InnerHeightFrac  = 0.88f;
+    const float TitleWidthFrac   = 0.58f;   // leaves room for the photo on top-right
+    const float TitleHeightFrac  = 0.16f;
+    const float TitleYFrac       = 0.41f;   // pushed higher into the framed top area
+    const float BodyHeightFrac   = 0.55f;
+    const float BodyYFrac        = -0.10f;  // pushed lower so it doesn't touch title
+    const float AuthorYFrac      = -0.43f;
 
     class Paper
     {
@@ -144,7 +145,7 @@ public static class BuildNewspaperContent
         float innerH = worldSize.y * InnerHeightFrac;
 
         float titleW = innerW * TitleWidthFrac;
-        float titleH = innerH * 0.22f;
+        float titleH = innerH * TitleHeightFrac;
         Vector3 titlePos = new Vector3(-innerW * 0.5f + titleW * 0.5f, innerH * TitleYFrac, -0.01f);
 
         float bodyW = innerW;
