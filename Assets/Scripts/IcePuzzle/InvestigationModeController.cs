@@ -34,4 +34,12 @@ public class InvestigationModeController : MonoBehaviour
         }
         OnToggled?.Invoke(IsActive);
     }
+
+    /// <summary>Reset to pre-hint state: hide button, drop highlights, clear active flag.</summary>
+    public void HideButton()
+    {
+        if (detector != null) detector.HideHighlights();
+        IsActive = false;
+        if (toggleButton != null) toggleButton.SetActive(false);
+    }
 }

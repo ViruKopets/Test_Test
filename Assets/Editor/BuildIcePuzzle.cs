@@ -149,10 +149,11 @@ public static class BuildIcePuzzle
         }
         SetField(weakDetector, "weakPoints", wpList);
 
-        // 8. UI: Canvas + condition bar + investigate button
+        // 8. UI: Canvas + condition bar + investigate button + replay button
         var uiCanvas = FindOrCreateUiCanvas(roots, scene);
         var (barRoot, fillImg, label) = FindOrCreateConditionBar(uiCanvas);
         var (btnGo, btnComponent)     = FindOrCreateInvestigateButton(uiCanvas);
+        var (replayGo, replayBtn)     = FindOrCreateReplayButton(uiCanvas);
 
         var ui = uiCanvas.GetOrAdd<CompassConditionUI>();
         SetField(ui, "source", compass);
@@ -182,6 +183,13 @@ public static class BuildIcePuzzle
         SetField(manager, "compasObject", compasGo);
         SetField(manager, "finalCrackVisual", finalCrack);
         SetField(manager, "ui", ui);
+        SetField(manager, "replayButton", replayGo);
+
+        // Hook the Replay button OnClick to IcePuzzleManager.Restart, clearing prior listeners.
+        var replayOnClick = replayBtn.onClick;
+        for (int i = replayOnClick.GetPersistentEventCount() - 1; i >= 0; i--)
+            UnityEditor.Events.UnityEventTools.RemovePersistentListener(replayOnClick, i);
+        UnityEditor.Events.UnityEventTools.AddPersistentListener(replayOnClick, manager.Restart);
 
         // Hide compass + final crack initially (manager re-applies in Awake at runtime,
         // but doing it here keeps Scene view tidy too).
@@ -341,6 +349,41 @@ public static class BuildIcePuzzle
         lrt.offsetMin = Vector2.zero; lrt.offsetMax = Vector2.zero;
 
         btnGo.SetActive(false);  // Hidden until hint fires
+        return (btnGo, btn);
+    }
+
+    static (GameObject btnGo, Button btn) FindOrCreateReplayButton(GameObject canvasGo)
+    {
+        var existing = canvasGo.transform.Find("ReplayButton");
+        if (existing != null)
+            return (existing.gameObject, existing.GetComponent<Button>());
+
+        var btnGo = new GameObject("ReplayButton", typeof(RectTransform));
+        btnGo.transform.SetParent(canvasGo.transform, false);
+        var img = btnGo.AddComponent<Image>();
+        img.color = new Color(0.7f, 0.3f, 0.3f, 0.9f);
+        var btn = btnGo.AddComponent<Button>();
+        btn.targetGraphic = img;
+
+        // Bottom-center so it doesn't collide with the Investigate button (top-right).
+        var rt = (RectTransform)btnGo.transform;
+        rt.anchorMin = new Vector2(0.5f, 0f); rt.anchorMax = new Vector2(0.5f, 0f);
+        rt.pivot     = new Vector2(0.5f, 0f);
+        rt.anchoredPosition = new Vector2(0f, 40f);
+        rt.sizeDelta = new Vector2(220f, 70f);
+
+        var labelGo = new GameObject("Label", typeof(RectTransform));
+        labelGo.transform.SetParent(btnGo.transform, false);
+        var tmp = labelGo.AddComponent<TextMeshProUGUI>();
+        tmp.text = "Переиграть";
+        tmp.color = Color.white;
+        tmp.fontSize = 26f;
+        tmp.alignment = TextAlignmentOptions.Center;
+        var lrt = (RectTransform)labelGo.transform;
+        lrt.anchorMin = Vector2.zero; lrt.anchorMax = Vector2.one;
+        lrt.offsetMin = Vector2.zero; lrt.offsetMax = Vector2.zero;
+
+        btnGo.SetActive(false);  // Hidden until the puzzle ends (Solved/Failed)
         return (btnGo, btn);
     }
 

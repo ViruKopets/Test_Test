@@ -36,6 +36,10 @@ public class IcePuzzleManager : MonoBehaviour
     [Tooltip("Fires when the compass reaches 0 (broken).")]
     [SerializeField] DialogueScr brokenDialog;
 
+    [Header("Replay")]
+    [Tooltip("Replay button. Hidden until the puzzle ends (Solved or Failed).")]
+    [SerializeField] GameObject replayButton;
+
     public IcePuzzleState State { get; private set; } = IcePuzzleState.Initial;
     public event Action<CompassTier> OnSolved;
     public event Action OnFailed;
@@ -49,6 +53,7 @@ public class IcePuzzleManager : MonoBehaviour
         if (compasObject != null) compasObject.SetActive(false);
         if (finalCrackVisual != null) finalCrackVisual.SetActive(false);
         if (ui != null) ui.Hide();   // Bar appears only on the lake close-up, not on the walking scene.
+        if (replayButton != null) replayButton.SetActive(false);
     }
 
     void Update()
@@ -129,6 +134,7 @@ public class IcePuzzleManager : MonoBehaviour
         if (finalCrackVisual != null) finalCrackVisual.SetActive(true);
         if (compasObject != null) compasObject.SetActive(true);
         if (investigation != null && investigation.IsActive) investigation.Toggle();   // hide highlights
+        if (replayButton != null) replayButton.SetActive(true);
         OnSolved?.Invoke(compass != null ? compass.Tier : CompassTier.Pristine);
     }
 
@@ -140,6 +146,32 @@ public class IcePuzzleManager : MonoBehaviour
             brokenDialog.gameObject.SetActive(true);
             brokenDialog.ActivateDialogue();
         }
+        if (replayButton != null) replayButton.SetActive(true);
         OnFailed?.Invoke();
+    }
+
+    /// <summary>Hook this to the Replay button's OnClick. Resets to fresh-scene state.</summary>
+    public void Restart()
+    {
+        _wrongHits = 0;
+        _hintFired = false;
+        _buttonShown = false;
+        State = IcePuzzleState.Initial;
+
+        if (compass != null) compass.ResetToInitial();
+        if (cracks != null) cracks.ResetAll();
+        if (weakPoints != null) weakPoints.ResetAll();
+        if (investigation != null) investigation.HideButton();
+
+        if (compasObject != null) compasObject.SetActive(false);
+        if (finalCrackVisual != null) finalCrackVisual.SetActive(false);
+
+        if (brokenDialog != null && brokenDialog.IsDialogueActive())
+            brokenDialog.gameObject.SetActive(false);
+        if (hintDialog != null && hintDialog.IsDialogueActive())
+            hintDialog.gameObject.SetActive(false);
+
+        if (ui != null) ui.Hide();
+        if (replayButton != null) replayButton.SetActive(false);
     }
 }

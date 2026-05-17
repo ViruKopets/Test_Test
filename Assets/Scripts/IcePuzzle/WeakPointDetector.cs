@@ -75,4 +75,11 @@ public class WeakPointDetector : MonoBehaviour
         foreach (var h in _spawnedHighlights) if (h != null) Destroy(h);
         _spawnedHighlights.Clear();
     }
+
+    public void ResetAll()
+    {
+        HideHighlights();
+        foreach (var wp in weakPoints)
+            if (wp != null) wp.consumed = false;
+    }
 }
