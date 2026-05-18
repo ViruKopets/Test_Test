@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 82d361abb7728514b89411ba7bf966d8
+guid: 119681f74ae66ba42ac9e096aaa9d13f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6892046297952119659
-    second: "\u0411\u0430\u0440\u043C\u0435\u043D_0"
+      213: -4772690323845722821
+    second: Door4hostel_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u0411\u0430\u0440\u043C\u0435\u043D_0"
+      name: Door4hostel_0
       rect:
         serializedVersion: 2
-        x: 196
-        y: 994
-        width: 523
-        height: 734
+        x: 0
+        y: 0
+        width: 496
+        height: 1120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 594940b58688a50a0800000000000000
-      internalID: -6892046297952119659
+      spriteID: b3d4b30ff6ff3cdb0800000000000000
+      internalID: -4772690323845722821
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0cb136bb666f2384b87ea492529c7499
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u0411\u0430\u0440\u043C\u0435\u043D_0": -6892046297952119659
+      Door4hostel_0: -4772690323845722821
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
