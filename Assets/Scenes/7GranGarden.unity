@@ -453,6 +453,7 @@ MonoBehaviour:
   GivesProgress: 0
   ProgressId: 0
   minDisplayTime: 0.01
+  LoadSceneAfter: 
 --- !u!1 &524209954
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,6 +914,38 @@ PrefabInstance:
       propertyPath: ObjToOn.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6396514832948498850, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6396514832948498850, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3675728329477958583, guid: 1ce96f7ba52b6a742b6c5c4d9e8b2744, type: 3}
+    - target: {fileID: 7325738879867761090, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.887
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325738879867761090, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.8347921
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325738879867761090, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -95.028
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325738879867761090, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -47.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325738879867761090, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325738879867761090, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000030518
+      objectReference: {fileID: 0}
     - target: {fileID: 7797989587897713040, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: m_Color.a
       value: 0.39215687
@@ -931,7 +964,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1806978606130606109, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6079794763912297096, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
@@ -1285,7 +1319,7 @@ MonoBehaviour:
   ProgressCheck: 6
   NotYetDialigue: {fileID: 0}
   MenuLoad: 0
-  Time: 1
+  MenuLoadDelay: 1
   BlackPanel: {fileID: 0}
 --- !u!1 &2122426965
 GameObject:

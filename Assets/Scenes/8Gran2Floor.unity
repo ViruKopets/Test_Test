@@ -647,7 +647,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -3795437932344149621, guid: 3100dd778c3b52743853b3bf306dd96a, type: 3}
+  m_Sprite: {fileID: -2970073484504309273, guid: a4e3a5e871b25264397ad4beebdb4b36, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -711,7 +711,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.24}
+    oldSize: {x: 3.27, y: 1.12}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1901,6 +1901,38 @@ PrefabInstance:
       propertyPath: ObjToOn.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6396514832948498850, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6396514832948498850, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3675728329477958583, guid: 1ce96f7ba52b6a742b6c5c4d9e8b2744, type: 3}
+    - target: {fileID: 7325738879867761090, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.8854792
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325738879867761090, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.832
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325738879867761090, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -100.4987
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325738879867761090, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -51.2414
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325738879867761090, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000026703
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325738879867761090, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0000038147
+      objectReference: {fileID: 0}
     - target: {fileID: 7797989587897713040, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: m_Color.a
       value: 0.39215687
@@ -1919,7 +1951,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1806978606130606109, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6079794763912297096, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
