@@ -30,6 +30,7 @@ public class DialogueScr : MonoBehaviour
     [SerializeField] Animator MommyAnimator;
     [SerializeField] bool FreezeAfter = false;
     [SerializeField] bool ShoudKick = false;
+    [SerializeField] bool ShoudTurnOnHidingSpot = false;
     [SerializeField] CameraChange CamBack;
     [SerializeField] DialogueScr AfterDialogue;
     [SerializeField] HidingSpot Hidout;
@@ -37,6 +38,9 @@ public class DialogueScr : MonoBehaviour
     [SerializeField] int ProgressId;
     [SerializeField] float minDisplayTime = 0.01f;
     [SerializeField] string LoadSceneAfter = "";
+
+    [SerializeField] bool CheckCompas = false;
+    [SerializeField] int CompasId = 0;
 
     bool Active;
     int Index = 0;
@@ -126,9 +130,25 @@ public class DialogueScr : MonoBehaviour
         DialoguePanel.SetActive(false);
         if (ObjToOn != null)
         {
-            for (int i = 0; i < ObjToOn.Count; i++)
+            if (!CheckCompas)
             {
-                ObjToOn[i].SetActive(true);
+                for (int i = 0; i < ObjToOn.Count; i++)
+                {
+                    ObjToOn[i].SetActive(true);
+                }
+            }
+            else
+            {
+                GameObject[] objects = GameObject.FindGameObjectsWithTag("GameManager");
+                if (objects.Length == 0) return;
+                GameManager Gm = objects[0].GetComponent<GameManager>();
+                if (!Gm.ItemProgress[0])
+                {
+                    for (int i = 0; i < ObjToOn.Count; i++)
+                    {
+                        ObjToOn[i].SetActive(true);
+                    }
+                }
             }
         }
         if (Invent != null) Invent.SetVisuals(true);
@@ -141,7 +161,11 @@ public class DialogueScr : MonoBehaviour
         {
             if (CamBack != null) CamBack.ChangeCamera();
             if (AfterDialogue != null) AfterDialogue.ActivateDialogue();
-            if (Hidout != null) Hidout.CanHide = true;
+            //if (Hidout != null) Hidout.CanHide = true;
+        }
+        if (ShoudTurnOnHidingSpot)
+        {
+            Hidout.CanHide = true;
         }
         if (ObjToOff != null)
         {

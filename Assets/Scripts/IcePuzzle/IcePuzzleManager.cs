@@ -136,6 +136,7 @@ public class IcePuzzleManager : MonoBehaviour
         if (investigation != null && investigation.IsActive) investigation.Toggle();   // hide highlights
         if (replayButton != null) replayButton.SetActive(true);
         OnSolved?.Invoke(compass != null ? compass.Tier : CompassTier.Pristine);
+        if (ui != null) ui.gameObject.SetActive(false);
     }
 
     void Fail()

@@ -945,7 +945,7 @@ MonoBehaviour:
   NamePlace: {fileID: 2078259911}
   DialoguePanel: {fileID: 2078259910}
   Imgs:
-  - {fileID: 21300000, guid: 4b4eefab8b8cff244b63af122da2dca2, type: 3}
+  - {fileID: 5510741715754306470, guid: 2de49931e21311944a0d331a5aea3754, type: 3}
   Words:
   - "\u041F\u0443\u0441\u0442\u043E\u0439 \u0448\u043A\u0430\u0444 \u0432 \u043D\u0435\u043C
     \u043C\u043E\u0436\u043D\u043E \u0431\u044B\u043B\u043E \u0431\u044B \u0441\u043F\u0440\u044F\u0442\u0430\u0442\u044C\u0441\u044F"
@@ -961,6 +961,7 @@ MonoBehaviour:
   MommyAnimator: {fileID: 0}
   FreezeAfter: 0
   ShoudKick: 0
+  ShoudTurnOnHidingSpot: 0
   CamBack: {fileID: 0}
   AfterDialogue: {fileID: 0}
   Hidout: {fileID: 0}
@@ -1245,6 +1246,12 @@ Transform:
   - {fileID: 709933633}
   - {fileID: 1671797982}
   - {fileID: 1489573472}
+  - {fileID: 883843403}
+  - {fileID: 469099389}
+  - {fileID: 667082522}
+  - {fileID: 1632207774}
+  - {fileID: 1721318843}
+  - {fileID: 261518250}
   - {fileID: 1776631699}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1361,13 +1368,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261518248}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: 15.69, z: 0}
-  m_LocalScale: {x: 0.41401085, y: 0.3500645, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.002614353, y: 0.24878225, z: 0}
+  m_LocalScale: {x: 0.0231771, y: 0.034559462, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 279817265}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 256344251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &279817264
 GameObject:
@@ -1825,6 +1832,7 @@ MonoBehaviour:
   MommyAnimator: {fileID: 0}
   FreezeAfter: 0
   ShoudKick: 0
+  ShoudTurnOnHidingSpot: 0
   CamBack: {fileID: 0}
   AfterDialogue: {fileID: 0}
   Hidout: {fileID: 0}
@@ -2522,6 +2530,7 @@ MonoBehaviour:
   MommyAnimator: {fileID: 0}
   FreezeAfter: 1
   ShoudKick: 1
+  ShoudTurnOnHidingSpot: 0
   CamBack: {fileID: 1489573474}
   AfterDialogue: {fileID: 1085940688}
   Hidout: {fileID: 1428615848}
@@ -2688,13 +2697,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469099387}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.11, y: 15.7046, z: 0}
-  m_LocalScale: {x: 0.4402912, y: 0.36639383, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.33663577, y: 0.2502237, z: 0}
+  m_LocalScale: {x: 0.024648324, y: 0.036171548, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1643527552}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 256344251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &496230193
 GameObject:
@@ -3287,6 +3296,7 @@ MonoBehaviour:
   MommyAnimator: {fileID: 0}
   FreezeAfter: 0
   ShoudKick: 0
+  ShoudTurnOnHidingSpot: 0
   CamBack: {fileID: 0}
   AfterDialogue: {fileID: 0}
   Hidout: {fileID: 0}
@@ -3752,13 +3762,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 667082520}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.1419, y: 15.6362, z: 0}
-  m_LocalScale: {x: 0.3780278, y: 0.32770473, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.17047599, y: 0.24347098, z: 0}
+  m_LocalScale: {x: 0.021162702, y: 0.032352038, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 121456463}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 256344251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &672605163
 GameObject:
@@ -4183,6 +4193,7 @@ MonoBehaviour:
   MommyAnimator: {fileID: 0}
   FreezeAfter: 0
   ShoudKick: 0
+  ShoudTurnOnHidingSpot: 0
   CamBack: {fileID: 0}
   AfterDialogue: {fileID: 0}
   Hidout: {fileID: 0}
@@ -4546,6 +4557,7 @@ MonoBehaviour:
   MommyAnimator: {fileID: 0}
   FreezeAfter: 0
   ShoudKick: 0
+  ShoudTurnOnHidingSpot: 0
   CamBack: {fileID: 0}
   AfterDialogue: {fileID: 0}
   Hidout: {fileID: 0}
@@ -4714,12 +4726,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883843401}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0448, y: 13.1849, z: 0}
-  m_LocalScale: {x: 0.6084506, y: 0.50290823, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.002905459, y: 0.0014709953, z: 0}
+  m_LocalScale: {x: 0.0340622, y: 0.049648676, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 256344251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &906441311
 GameObject:
@@ -5255,6 +5267,7 @@ MonoBehaviour:
   MommyAnimator: {fileID: 0}
   FreezeAfter: 0
   ShoudKick: 0
+  ShoudTurnOnHidingSpot: 0
   CamBack: {fileID: 0}
   AfterDialogue: {fileID: 0}
   Hidout: {fileID: 0}
@@ -5454,6 +5467,7 @@ MonoBehaviour:
   MommyAnimator: {fileID: 0}
   FreezeAfter: 1
   ShoudKick: 1
+  ShoudTurnOnHidingSpot: 0
   CamBack: {fileID: 1489573474}
   AfterDialogue: {fileID: 1085940688}
   Hidout: {fileID: 1428615848}
@@ -5531,9 +5545,10 @@ MonoBehaviour:
   MommyAnimator: {fileID: 0}
   FreezeAfter: 0
   ShoudKick: 0
+  ShoudTurnOnHidingSpot: 1
   CamBack: {fileID: 0}
   AfterDialogue: {fileID: 0}
-  Hidout: {fileID: 0}
+  Hidout: {fileID: 1428615848}
   GivesProgress: 0
   ProgressId: 0
   minDisplayTime: 0.01
@@ -6336,6 +6351,7 @@ MonoBehaviour:
   ActivateOnTrigger: 0
   ObjToOff:
   - {fileID: 1834947554}
+  - {fileID: 1428615845}
   ObjToOn:
   - {fileID: 526232266}
   - {fileID: 1636251491}
@@ -6344,6 +6360,7 @@ MonoBehaviour:
   MommyAnimator: {fileID: 0}
   FreezeAfter: 0
   ShoudKick: 0
+  ShoudTurnOnHidingSpot: 0
   CamBack: {fileID: 0}
   AfterDialogue: {fileID: 0}
   Hidout: {fileID: 0}
@@ -6364,7 +6381,7 @@ GameObject:
   - component: {fileID: 1428615848}
   - component: {fileID: 1428615849}
   m_Layer: 0
-  m_Name: PalceToHide
+  m_Name: PlaceToHide
   m_TagString: HidingSpot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7086,13 +7103,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632207772}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.92, y: 15.62, z: 0}
-  m_LocalScale: {x: 0.4171831, y: 0.37630084, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.16888049, y: 0.24187167, z: 0}
+  m_LocalScale: {x: 0.023354689, y: 0.0371496, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1807835533}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 256344251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1636251491
 GameObject:
@@ -7538,13 +7555,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721318841}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.6508, y: 15.6828, z: 0}
-  m_LocalScale: {x: 0.2788606, y: 0.25080717, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.3217558, y: 0.24807152, z: 0}
+  m_LocalScale: {x: 0.015611137, y: 0.02476047, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1584100914}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 256344251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1736404288
 GameObject:
@@ -8115,8 +8132,8 @@ Transform:
   m_GameObject: {fileID: 1834947554}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0134, y: 0.0403, z: 0}
-  m_LocalScale: {x: 18, y: 10, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 19, y: 11, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -8931,6 +8948,7 @@ MonoBehaviour:
   MommyAnimator: {fileID: 0}
   FreezeAfter: 1
   ShoudKick: 1
+  ShoudTurnOnHidingSpot: 0
   CamBack: {fileID: 1489573474}
   AfterDialogue: {fileID: 1085940688}
   Hidout: {fileID: 1428615848}
@@ -9599,9 +9617,3 @@ SceneRoots:
   - {fileID: 526232268}
   - {fileID: 1572345086}
   - {fileID: 852054623}
-  - {fileID: 883843403}
-  - {fileID: 469099389}
-  - {fileID: 667082522}
-  - {fileID: 1632207774}
-  - {fileID: 1721318843}
-  - {fileID: 261518250}
