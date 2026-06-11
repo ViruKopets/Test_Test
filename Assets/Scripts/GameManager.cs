@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] List<bool> Progress;
-    [SerializeField] List<bool> ItemProgress;
+    [SerializeField] public List<bool> ItemProgress;
     int GoesTo;
     bool GoodEnding;
     public int PicIndex;
@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
         }
         else if (SceneName == "6GranHouse")
         {
-            if (!ItemProgress[2])
+            if (!ItemProgress[2] && !Progress[8])
             {
                 Boot.TurnOnById(0);
                 Boot.TurnOnDialog(0);
@@ -103,6 +103,18 @@ public class GameManager : MonoBehaviour
             {
                 Boot.TurnOnById(1);
                 Boot.TurnOnDialog(1);
+            }
+            if (Progress[8])
+            {
+                Boot.TurnOnById(2);
+            }
+        }
+        else if (SceneName == "7GranGarden")
+        {
+            if (ItemProgress[2])
+            {
+                Boot.TurnOffItems();
+                Boot.TurnOnById(0);
             }
         }
     }

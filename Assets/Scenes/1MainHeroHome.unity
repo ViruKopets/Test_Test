@@ -275,6 +275,7 @@ MonoBehaviour:
   MommyAnimator: {fileID: 0}
   FreezeAfter: 0
   ShoudKick: 0
+  ShoudTurnOnHidingSpot: 0
   CamBack: {fileID: 0}
   AfterDialogue: {fileID: 0}
   Hidout: {fileID: 0}
@@ -3011,7 +3012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22308de6b26d6904f8fb1901d1930c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Progress: 0000000000000000
+  Progress: 000000000000000000
   ItemProgress: 0000000000
   PicIndex: 0
   PicIndex2: 0
