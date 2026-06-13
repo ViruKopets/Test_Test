@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     bool Freeze;
 
     [SerializeField] Animator Anim;
+    [SerializeField] AudioSource Audio;
 
     void Update()
     {
@@ -41,6 +42,13 @@ public class Player : MonoBehaviour
             Sprite.flipX = false;
         }
     }
+
+    public void PlayFootStepSound()
+    {
+        Audio.pitch = Random.Range(0.9f, 1.1f);
+        Audio.Play();
+    }
+
     public void IsFreezed(bool IsIn)
     {
         if (IsIn)

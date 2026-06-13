@@ -457,6 +457,7 @@ MonoBehaviour:
   LoadSceneAfter: 
   CheckCompas: 0
   CompasId: 0
+  MiniGame: {fileID: 0}
 --- !u!1 &505116712
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,6 +498,7 @@ MonoBehaviour:
   SceneName: 7GranGarden
   Player: {fileID: 0}
   MiniGame: {fileID: 0}
+  AudioManager: {fileID: 0}
 --- !u!4 &505116714
 Transform:
   m_ObjectHideFlags: 0
@@ -790,6 +792,7 @@ MonoBehaviour:
   DialoguePan: {fileID: 841300423}
   CamFollow: {fileID: 0}
   ToActivate: {fileID: 0}
+  AudioManager: {fileID: 0}
 --- !u!1 &628878710
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,6 +879,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: SFXList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: 'SFXList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c1bf3f93ab09b14ebc1287899539c85, type: 3}
     - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: 'MusicList.Array.data[0]'
       value: 
@@ -1071,6 +1082,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &841300427 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+  m_PrefabInstance: {fileID: 841300422}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed2e795a17e59d478c0cc17a463a4a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1231150213
@@ -1542,6 +1564,8 @@ MonoBehaviour:
   ItemProgressId: 2
   BrakeOnUse: 1
   TurnOnOnCollect: {fileID: 1995340027}
+  AudioMan: {fileID: 841300427}
+  SFXId: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

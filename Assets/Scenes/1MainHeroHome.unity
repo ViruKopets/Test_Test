@@ -700,6 +700,7 @@ MonoBehaviour:
   ItemProgressId: 0
   BrakeOnUse: 1
   TurnOnOnCollect: {fileID: 0}
+  AudioMan: {fileID: 5505926159525152347}
 --- !u!1 &189473461
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,10 +856,10 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 0
   ProggressId: 0
-  Sfx: 0
+  Sfx: 1
   UI: 0
-  audioManager: {fileID: 0}
-  AudioIndex: 0
+  audioManager: {fileID: 5505926159525152347}
+  AudioIndex: 2
   endgate: 0
 --- !u!114 &189473466
 MonoBehaviour:
@@ -2437,6 +2438,7 @@ MonoBehaviour:
   ItemProgressId: 0
   BrakeOnUse: 1
   TurnOnOnCollect: {fileID: 0}
+  AudioMan: {fileID: 5505926159525152347}
 --- !u!1 &1072914900
 GameObject:
   m_ObjectHideFlags: 0
@@ -3136,6 +3138,7 @@ MonoBehaviour:
   ItemProgressId: 0
   BrakeOnUse: 1
   TurnOnOnCollect: {fileID: 0}
+  AudioMan: {fileID: 5505926159525152347}
 --- !u!61 &1399110220
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3577,6 +3580,7 @@ MonoBehaviour:
   ItemProgressId: 0
   BrakeOnUse: 1
   TurnOnOnCollect: {fileID: 0}
+  AudioMan: {fileID: 5505926159525152347}
 --- !u!1 &2051408722
 GameObject:
   m_ObjectHideFlags: 0
@@ -4256,9 +4260,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: SFXList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: 'SFXList.Array.data[0]'
       value: 
       objectReference: {fileID: 8300000, guid: 82a351799b3e2f1439f3e6d5d97eb5bc, type: 3}
+    - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: 'SFXList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c1bf3f93ab09b14ebc1287899539c85, type: 3}
+    - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: 'SFXList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: f6c01b8a52b8604499965fffb9f4b1cc, type: 3}
     - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: 'MusicList.Array.data[0]'
       value: 

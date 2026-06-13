@@ -12,6 +12,9 @@ public class PickupItem : MonoBehaviour
     [SerializeField] bool BrakeOnUse = true;
     [SerializeField] GameObject TurnOnOnCollect;
 
+    [SerializeField] AudioManager AudioMan;
+    [SerializeField] int SFXId = 1;
+
     public void PickUp()
     {
         if (Invent == null)
@@ -33,6 +36,10 @@ public class PickupItem : MonoBehaviour
         if (TurnOnOnCollect != null)
         {
             TurnOnOnCollect.SetActive(true);
+        }
+        if (AudioMan != null)
+        {
+            AudioMan.PlaySFX(SFXId);
         }
         Destroy(this.gameObject);
     }

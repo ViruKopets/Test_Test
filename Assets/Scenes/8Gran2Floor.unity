@@ -560,6 +560,8 @@ MonoBehaviour:
   ItemProgressId: 2
   BrakeOnUse: 1
   TurnOnOnCollect: {fileID: 0}
+  AudioMan: {fileID: 1488207770}
+  SFXId: 1
 --- !u!61 &142394266
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -715,6 +717,8 @@ MonoBehaviour:
   ItemProgressId: 2
   BrakeOnUse: 1
   TurnOnOnCollect: {fileID: 0}
+  AudioMan: {fileID: 1488207770}
+  SFXId: 1
 --- !u!61 &144434302
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -869,10 +873,10 @@ MonoBehaviour:
   TurnOff: {fileID: 678271856}
   IsProgress: 0
   ProggressId: 0
-  Sfx: 0
+  Sfx: 1
   UI: 0
-  audioManager: {fileID: 0}
-  AudioIndex: 0
+  audioManager: {fileID: 1488207770}
+  AudioIndex: 1
   endgate: 0
 --- !u!61 &229209053
 BoxCollider2D:
@@ -5197,6 +5201,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: SFXList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: 'SFXList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c1bf3f93ab09b14ebc1287899539c85, type: 3}
+    - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: 'MusicList.Array.data[0]'
       value: 
       objectReference: {fileID: 8300000, guid: 3e7a5a31ee2457e4785aece6626ef6d5, type: 3}
@@ -5360,6 +5372,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2965702951035344715, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
   m_PrefabInstance: {fileID: 1488207768}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1488207770 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+  m_PrefabInstance: {fileID: 1488207768}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed2e795a17e59d478c0cc17a463a4a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1564837632
 GameObject:
   m_ObjectHideFlags: 0
@@ -5611,10 +5634,10 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 0
   ProggressId: 0
-  Sfx: 0
+  Sfx: 1
   UI: 0
-  audioManager: {fileID: 0}
-  AudioIndex: 0
+  audioManager: {fileID: 1488207770}
+  AudioIndex: 1
   endgate: 0
 --- !u!61 &1602580358
 BoxCollider2D:
@@ -6333,6 +6356,8 @@ MonoBehaviour:
   ItemProgressId: 2
   BrakeOnUse: 1
   TurnOnOnCollect: {fileID: 0}
+  AudioMan: {fileID: 1488207770}
+  SFXId: 1
 --- !u!1 &1796931875
 GameObject:
   m_ObjectHideFlags: 0
@@ -7778,10 +7803,10 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 0
   ProggressId: 0
-  Sfx: 0
+  Sfx: 1
   UI: 0
-  audioManager: {fileID: 0}
-  AudioIndex: 0
+  audioManager: {fileID: 1488207770}
+  AudioIndex: 1
   endgate: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
