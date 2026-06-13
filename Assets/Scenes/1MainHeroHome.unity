@@ -711,6 +711,7 @@ GameObject:
   - component: {fileID: 189473464}
   - component: {fileID: 189473463}
   - component: {fileID: 189473465}
+  - component: {fileID: 189473466}
   m_Layer: 0
   m_Name: Lock
   m_TagString: InterByItem
@@ -854,6 +855,22 @@ MonoBehaviour:
   IsProgress: 0
   ProggressId: 0
   endgate: 0
+--- !u!114 &189473466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189473461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf65d36e59765a4390c5da51b83c77d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioMan: {fileID: 5505926159525152347}
+  Sfx: 1
+  Ui: 0
+  AudioIndex: 0
 --- !u!114 &254768588 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3277436510766193722, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
@@ -1809,6 +1826,7 @@ GameObject:
   - component: {fileID: 885366937}
   - component: {fileID: 885366936}
   - component: {fileID: 885366938}
+  - component: {fileID: 885366939}
   m_Layer: 0
   m_Name: Mommy
   m_TagString: Untagged
@@ -1908,6 +1926,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &885366939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885366935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf65d36e59765a4390c5da51b83c77d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioMan: {fileID: 5505926159525152347}
+  Sfx: 1
+  Ui: 0
+  AudioIndex: 0
 --- !u!1 &898998050
 GameObject:
   m_ObjectHideFlags: 0
@@ -4135,10 +4169,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: 'SFXList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 82a351799b3e2f1439f3e6d5d97eb5bc, type: 3}
+    - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: 'MusicList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: e7cfb3516c1f67943a06f947d47e7f2c, type: 3}
     - target: {fileID: 1614618448318047689, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1624979448444030916, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: e7cfb3516c1f67943a06f947d47e7f2c, type: 3}
     - target: {fileID: 1800358728261945386, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4367,6 +4413,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+--- !u!114 &5505926159525152347 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+  m_PrefabInstance: {fileID: 5505926159525152346}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed2e795a17e59d478c0cc17a463a4a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &5556191081352266875
 RectTransform:
   m_ObjectHideFlags: 0

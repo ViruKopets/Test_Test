@@ -10,8 +10,15 @@ public class Chest : MonoBehaviour
     [SerializeField] GameObject TurnOff;
     [SerializeField] bool IsProgress;
     [SerializeField] int ProggressId;
+    
+    [Header("Audio")]
+    [SerializeField] bool Sfx;
+    [SerializeField] bool UI;
+    [SerializeField] AudioManager audioManager;
+    [SerializeField] int AudioIndex;
 
     [SerializeField] bool endgate;
+
     public string PassInfo()
     {
         return ItemsPurp;
@@ -48,6 +55,16 @@ public class Chest : MonoBehaviour
             }
 
         }
+        if (Sfx)
+        {
+            audioManager.PlaySFX(AudioIndex);
+
+        }
+        else if (UI)
+        {
+            audioManager.PlayUI(AudioIndex);
+        }
+        
         if (Delete) Destroy(this.gameObject);
     }
 }

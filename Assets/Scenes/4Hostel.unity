@@ -9320,10 +9320,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: 'MusicList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: e92d70e98173e604dbedb92afc2875bc, type: 3}
     - target: {fileID: 1614618448318047689, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1624979448444030916, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: e92d70e98173e604dbedb92afc2875bc, type: 3}
     - target: {fileID: 1800358728261945386, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: m_Pivot.x
       value: 0

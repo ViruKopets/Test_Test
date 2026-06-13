@@ -14,8 +14,11 @@ public class VolumeSettings : MonoBehaviour
     [SerializeField] private string SFXSaveKey = "SFXVolume";
     [SerializeField] private string UISaveKey = "UIVolume";
 
+    [SerializeField] AudioManager AudioManager;
+
     private void Start()
     {
+
         LoadAllVolume();
     }
 
@@ -31,12 +34,28 @@ public class VolumeSettings : MonoBehaviour
         Mixer.SetFloat("Music", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat(MusicSaveKey, volume);
     }
+
+    public void SetSFXVolumeByPlayer()
+    {
+        SetSFXVolume();
+        if (AudioManager != null)
+            AudioManager.PlaySFX(0);
+    }
+
     public void SetSFXVolume()
     {
         float volume = SFXVolumeSlider.value;
         Mixer.SetFloat("SFX", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat(SFXSaveKey, volume);
     }
+
+    public void SetUiVolumeByPlayer()
+    {
+        SetUIVolume();
+        if (AudioManager != null)
+            AudioManager.PlayUI(0);
+    }
+
     public void SetUIVolume()
     {
         float volume = UIVolumeSlider.value;
@@ -44,17 +63,37 @@ public class VolumeSettings : MonoBehaviour
         PlayerPrefs.SetFloat(UISaveKey, volume);
     }
 
+
     private void LoadAllVolume()
     {
-        MasterVolumeSlider.value = PlayerPrefs.GetFloat(MasterSaveKey);
-        MusicVolumeSlider.value = PlayerPrefs.GetFloat(MusicSaveKey);
-        SFXVolumeSlider.value = PlayerPrefs.GetFloat(SFXSaveKey);
-        UIVolumeSlider.value = PlayerPrefs.GetFloat(UISaveKey);
-
+        MasterVolumeSlider.value = PlayerPrefs.GetFloat(MasterSaveKey,0.75f);
+        MusicVolumeSlider.value = PlayerPrefs.GetFloat(MusicSaveKey, 0.75f);
+        SFXVolumeSlider.value = PlayerPrefs.GetFloat(SFXSaveKey, 0.75f);
+        UIVolumeSlider.value = PlayerPrefs.GetFloat(UISaveKey, 0.75f);
 
         SetMasterVolume();
         SetMusicVolume();
         SetSFXVolume();
         SetUIVolume();
+
     }
+
+    private void DisableSliderEvents(bool disable)
+    {
+        if (disable)
+        {
+            MasterVolumeSlider.onValueChanged.RemoveListener(_ => SetMasterVolume());
+            MusicVolumeSlider.onValueChanged.RemoveListener(_ => SetMusicVolume());
+            SFXVolumeSlider.onValueChanged.RemoveListener(_ => SetSFXVolume());
+            UIVolumeSlider.onValueChanged.RemoveListener(_ => SetUIVolume());
+        }
+        else
+        {
+            MasterVolumeSlider.onValueChanged.AddListener(_ => SetMasterVolume());
+            MusicVolumeSlider.onValueChanged.AddListener(_ => SetMusicVolume());
+            SFXVolumeSlider.onValueChanged.AddListener(_ => SetSFXVolume());
+            UIVolumeSlider.onValueChanged.AddListener(_ => SetUIVolume());
+        }
+    }
+
 }

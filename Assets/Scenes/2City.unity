@@ -289,6 +289,8 @@ MonoBehaviour:
   ProgressId: 0
   minDisplayTime: 0.1
   LoadSceneAfter: 
+  CheckCompas: 0
+  CompasId: 0
 --- !u!61 &69658630
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -952,6 +954,8 @@ MonoBehaviour:
   ProgressId: 0
   minDisplayTime: 0.1
   LoadSceneAfter: 
+  CheckCompas: 0
+  CompasId: 0
 --- !u!1 &568252636 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1632266519710645689, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
@@ -1039,6 +1043,8 @@ MonoBehaviour:
   ProgressId: 0
   minDisplayTime: 0.1
   LoadSceneAfter: 
+  CheckCompas: 0
+  CompasId: 0
 --- !u!1 &777186833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,6 +1271,8 @@ MonoBehaviour:
   ProgressId: 0
   minDisplayTime: 0.1
   LoadSceneAfter: 
+  CheckCompas: 0
+  CompasId: 0
 --- !u!61 &941290318
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1509,6 +1517,8 @@ MonoBehaviour:
   ProgressId: 0
   minDisplayTime: 0.1
   LoadSceneAfter: 
+  CheckCompas: 0
+  CompasId: 0
 --- !u!1 &1209933770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,6 +1615,8 @@ MonoBehaviour:
   ProgressId: 0
   minDisplayTime: 0.1
   LoadSceneAfter: 
+  CheckCompas: 0
+  CompasId: 0
 --- !u!114 &1232460519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1943,6 +1955,8 @@ MonoBehaviour:
   ProgressId: 0
   minDisplayTime: 0.1
   LoadSceneAfter: 
+  CheckCompas: 0
+  CompasId: 0
 --- !u!1 &1510461621
 GameObject:
   m_ObjectHideFlags: 0
@@ -2358,10 +2372,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: 'MusicList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: ec3894cb17e77cc4db750dbf548b5c09, type: 3}
     - target: {fileID: 1614618448318047689, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1624979448444030916, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: ec3894cb17e77cc4db750dbf548b5c09, type: 3}
     - target: {fileID: 1800358728261945386, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: m_Pivot.x
       value: 0
