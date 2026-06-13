@@ -4,64 +4,57 @@ using UnityEngine.UI;
 
 public class VolumeSettings : MonoBehaviour
 {
-    [SerializeField] private Slider volumeSlider;
-    [SerializeField] private AudioMixer audioMixer;
-    [SerializeField] private string mixerParameterName = "MasterVolume";
-    [SerializeField] private string saveKey = "MasterVolume";
+    [SerializeField] private AudioMixer Mixer;
+    [SerializeField] private Slider MasterVolumeSlider;
+    [SerializeField] private Slider MusicVolumeSlider;
+    [SerializeField] private Slider SFXVolumeSlider;
+    [SerializeField] private Slider UIVolumeSlider;
+    [SerializeField] private string MasterSaveKey = "MasterVolume";
+    [SerializeField] private string MusicSaveKey = "MusicVolume";
+    [SerializeField] private string SFXSaveKey = "SFXVolume";
+    [SerializeField] private string UISaveKey = "UIVolume";
 
     private void Start()
     {
-        // Загружаем сохраненную громкость
-        LoadVolume();
-
-        // Подписываемся на событие изменения значения слайдера
-        if (volumeSlider != null)
-        {
-            volumeSlider.onValueChanged.AddListener(OnVolumeChanged);
-        }
+        LoadAllVolume();
     }
 
-    public void ShowCurrVolume()
+    public void SetMasterVolume()
     {
-
+        float volume = MasterVolumeSlider.value;
+        Mixer.SetFloat("Master", Mathf.Log10(volume) * 20);
+        PlayerPrefs.SetFloat(MasterSaveKey, volume);
     }
-
-    private void OnVolumeChanged(float volume)
+    public void SetMusicVolume()
     {
-        // Применяем громкость
-        SetVolume(volume);
-
-        // Сохраняем значение
-        SaveVolume(volume);
+        float volume = MusicVolumeSlider.value;
+        Mixer.SetFloat("Music", Mathf.Log10(volume) * 20);
+        PlayerPrefs.SetFloat(MusicSaveKey, volume);
     }
-
-    private void SetVolume(float volume)
+    public void SetSFXVolume()
     {
-        if (audioMixer != null)
-        {
-            // Конвертируем линейное значение (0-1) в децибелы (-80dB to 0dB)
-            float volumeInDb = Mathf.Log10(Mathf.Max(volume, 0.0001f)) * 20f;
-            audioMixer.SetFloat(mixerParameterName, volumeInDb);
-        }
+        float volume = SFXVolumeSlider.value;
+        Mixer.SetFloat("SFX", Mathf.Log10(volume) * 20);
+        PlayerPrefs.SetFloat(SFXSaveKey, volume);
     }
-
-    private void SaveVolume(float volume)
+    public void SetUIVolume()
     {
-        PlayerPrefs.SetFloat(saveKey, volume);
-        PlayerPrefs.Save();
+        float volume = UIVolumeSlider.value;
+        Mixer.SetFloat("UI", Mathf.Log10(volume) * 20);
+        PlayerPrefs.SetFloat(UISaveKey, volume);
     }
 
-    private void LoadVolume()
+    private void LoadAllVolume()
     {
-        if (volumeSlider != null)
-        {
-            // Загружаем сохраненную громкость или используем значение по умолчанию (0.75)
-            float savedVolume = PlayerPrefs.GetFloat(saveKey, 0.75f);
-            volumeSlider.value = savedVolume;
+        MasterVolumeSlider.value = PlayerPrefs.GetFloat(MasterSaveKey);
+        MusicVolumeSlider.value = PlayerPrefs.GetFloat(MusicSaveKey);
+        SFXVolumeSlider.value = PlayerPrefs.GetFloat(SFXSaveKey);
+        UIVolumeSlider.value = PlayerPrefs.GetFloat(UISaveKey);
 
-            // Применяем загруженную громкость
-            SetVolume(savedVolume);
-        }
+
+        SetMasterVolume();
+        SetMusicVolume();
+        SetSFXVolume();
+        SetUIVolume();
     }
-
 }
