@@ -87,4 +87,13 @@ public class SceneLoader : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+    }
+    public void UnPauseGame()
+    {
+        Time.timeScale = 1f;
+    }
 }
