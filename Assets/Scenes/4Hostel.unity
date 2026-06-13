@@ -258,6 +258,10 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 1
   ProggressId: 2
+  Sfx: 1
+  UI: 0
+  audioManager: {fileID: 2078259914}
+  AudioIndex: 1
   endgate: 0
 --- !u!61 &70434631
 BoxCollider2D:
@@ -971,6 +975,7 @@ MonoBehaviour:
   LoadSceneAfter: 
   CheckCompas: 0
   CompasId: 0
+  MiniGame: {fileID: 0}
 --- !u!1 &255946150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,6 +1516,10 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 0
   ProggressId: 1
+  Sfx: 0
+  UI: 0
+  audioManager: {fileID: 0}
+  AudioIndex: 0
   endgate: 0
 --- !u!212 &326549814
 SpriteRenderer:
@@ -1844,6 +1853,7 @@ MonoBehaviour:
   LoadSceneAfter: 
   CheckCompas: 0
   CompasId: 0
+  MiniGame: {fileID: 0}
 --- !u!61 &351542334
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2205,6 +2215,10 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 1
   ProggressId: 4
+  Sfx: 1
+  UI: 0
+  audioManager: {fileID: 2078259914}
+  AudioIndex: 1
   endgate: 0
 --- !u!61 &416423758
 BoxCollider2D:
@@ -2544,6 +2558,7 @@ MonoBehaviour:
   LoadSceneAfter: 
   CheckCompas: 0
   CompasId: 0
+  MiniGame: {fileID: 256344252}
 --- !u!1 &465896321
 GameObject:
   m_ObjectHideFlags: 0
@@ -2928,7 +2943,7 @@ Transform:
   m_GameObject: {fileID: 526232266}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.9524, y: -0.1202, z: 0}
+  m_LocalPosition: {x: -0.29, y: 0.05, z: 0}
   m_LocalScale: {x: 2.09361, y: 4.34452, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3312,6 +3327,7 @@ MonoBehaviour:
   LoadSceneAfter: 
   CheckCompas: 0
   CompasId: 0
+  MiniGame: {fileID: 0}
 --- !u!61 &565359484
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3512,6 +3528,10 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 1
   ProggressId: 1
+  Sfx: 1
+  UI: 0
+  audioManager: {fileID: 2078259914}
+  AudioIndex: 1
   endgate: 0
 --- !u!1 &593134150
 GameObject:
@@ -4029,6 +4049,10 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 1
   ProggressId: 5
+  Sfx: 1
+  UI: 0
+  audioManager: {fileID: 2078259914}
+  AudioIndex: 1
   endgate: 0
 --- !u!61 &707889847
 BoxCollider2D:
@@ -4211,6 +4235,7 @@ MonoBehaviour:
   LoadSceneAfter: 
   CheckCompas: 0
   CompasId: 0
+  MiniGame: {fileID: 0}
 --- !u!61 &709933635
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4387,6 +4412,10 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 0
   ProggressId: 1
+  Sfx: 0
+  UI: 0
+  audioManager: {fileID: 0}
+  AudioIndex: 0
   endgate: 0
 --- !u!212 &749053182
 SpriteRenderer:
@@ -4577,6 +4606,7 @@ MonoBehaviour:
   LoadSceneAfter: 
   CheckCompas: 0
   CompasId: 0
+  MiniGame: {fileID: 0}
 --- !u!61 &812370094
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5109,6 +5139,10 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 1
   ProggressId: 3
+  Sfx: 1
+  UI: 0
+  audioManager: {fileID: 2078259914}
+  AudioIndex: 1
   endgate: 0
 --- !u!61 &977679868
 BoxCollider2D:
@@ -5289,6 +5323,7 @@ MonoBehaviour:
   LoadSceneAfter: 
   CheckCompas: 0
   CompasId: 0
+  MiniGame: {fileID: 0}
 --- !u!61 &995810781
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5491,6 +5526,7 @@ MonoBehaviour:
   LoadSceneAfter: 
   CheckCompas: 0
   CompasId: 0
+  MiniGame: {fileID: 256344252}
 --- !u!1 &1085940686
 GameObject:
   m_ObjectHideFlags: 0
@@ -5571,6 +5607,7 @@ MonoBehaviour:
   LoadSceneAfter: 
   CheckCompas: 0
   CompasId: 0
+  MiniGame: {fileID: 0}
 --- !u!1 &1101729133
 GameObject:
   m_ObjectHideFlags: 0
@@ -5670,6 +5707,10 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 0
   ProggressId: 1
+  Sfx: 0
+  UI: 0
+  audioManager: {fileID: 0}
+  AudioIndex: 0
   endgate: 0
 --- !u!212 &1101729137
 SpriteRenderer:
@@ -5920,6 +5961,7 @@ MonoBehaviour:
   SceneName: 4Hostel
   Player: {fileID: 1747043676}
   MiniGame: {fileID: 256344252}
+  AudioManager: {fileID: 0}
 --- !u!4 &1112140992
 Transform:
   m_ObjectHideFlags: 0
@@ -6388,6 +6430,7 @@ MonoBehaviour:
   LoadSceneAfter: 
   CheckCompas: 0
   CompasId: 0
+  MiniGame: {fileID: 0}
 --- !u!1 &1428615845
 GameObject:
   m_ObjectHideFlags: 0
@@ -6652,6 +6695,7 @@ MonoBehaviour:
   DialoguePan: {fileID: 2078259910}
   CamFollow: {fileID: 0}
   ToActivate: {fileID: 0}
+  AudioManager: {fileID: 2078259914}
 --- !u!61 &1489573475
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6797,6 +6841,10 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 0
   ProggressId: 1
+  Sfx: 0
+  UI: 0
+  audioManager: {fileID: 0}
+  AudioIndex: 0
   endgate: 0
 --- !u!212 &1515579774
 SpriteRenderer:
@@ -7240,6 +7288,7 @@ MonoBehaviour:
   DialoguePan: {fileID: 2078259910}
   CamFollow: {fileID: 0}
   ToActivate: {fileID: 0}
+  AudioManager: {fileID: 0}
 --- !u!61 &1636251495
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8978,6 +9027,7 @@ MonoBehaviour:
   LoadSceneAfter: 
   CheckCompas: 0
   CompasId: 0
+  MiniGame: {fileID: 256344252}
 --- !u!1 &1971285077
 GameObject:
   m_ObjectHideFlags: 0
@@ -9077,6 +9127,10 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 0
   ProggressId: 1
+  Sfx: 0
+  UI: 0
+  audioManager: {fileID: 0}
+  AudioIndex: 0
   endgate: 0
 --- !u!212 &1971285081
 SpriteRenderer:
@@ -9321,6 +9375,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: SFXList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: 'SFXList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 53d053bd371a6ed4792d80d1f259f492, type: 3}
+    - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: 'MusicList.Array.data[0]'
       value: 
       objectReference: {fileID: 8300000, guid: e92d70e98173e604dbedb92afc2875bc, type: 3}
@@ -9549,6 +9611,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2078259914 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+  m_PrefabInstance: {fileID: 2078259909}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed2e795a17e59d478c0cc17a463a4a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2131547053

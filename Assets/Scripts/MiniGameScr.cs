@@ -102,6 +102,7 @@ public class MiniGameScr : MonoBehaviour
             BadDialogue.ActivateDialogue();
             Gm.SetEnding(false);
         }
+
     }
 
     public void SetAllDialogsNotKick()
@@ -116,5 +117,12 @@ public class MiniGameScr : MonoBehaviour
             Pics[PickedIndex1].transform.position = FPlace.position;
         if (PickedIndex2 >= 0 && PickedIndex2 < Pics.Count)
             Pics[PickedIndex2].transform.position = SPlace.position;
+    }
+
+    public void NotKick()
+    {
+        UselessDialogue.NotKick();
+        GoodDialogue.NotKick();
+        BadDialogue.NotKick();
     }
 }

@@ -101,11 +101,13 @@ public class GameManager : MonoBehaviour
             }
             else
             {
+                Boot.ChangeMusic();
                 Boot.TurnOnById(1);
                 Boot.TurnOnDialog(1);
             }
             if (Progress[8])
             {
+                Boot.ChangeMusic();
                 Boot.TurnOnById(2);
             }
         }

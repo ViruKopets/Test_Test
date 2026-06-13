@@ -854,6 +854,10 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 0
   ProggressId: 0
+  Sfx: 0
+  UI: 0
+  audioManager: {fileID: 0}
+  AudioIndex: 0
   endgate: 0
 --- !u!114 &189473466
 MonoBehaviour:
@@ -1251,10 +1255,6 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 16.18
       objectReference: {fileID: 0}
-    - target: {fileID: 3277436510766193722, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
-      propertyPath: Sprite
-      value: 
-      objectReference: {fileID: 846605529}
     - target: {fileID: 4672585240066158510, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
       propertyPath: m_Constraints
       value: 4
@@ -1723,11 +1723,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &846605529 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 2299460207120663761, guid: f7278a400794ee1458eb1b796c60d1cf, type: 3}
-  m_PrefabInstance: {fileID: 611578824}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &879565112
 GameObject:
   m_ObjectHideFlags: 0

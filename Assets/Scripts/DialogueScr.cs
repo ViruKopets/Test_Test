@@ -48,6 +48,8 @@ public class DialogueScr : MonoBehaviour
     private float currentPhraseStartTime;
     private bool canSkip = false;
 
+    [SerializeField] MiniGameScr MiniGame;
+
     private void Start()
     {
         TryResolveInvent();
@@ -161,6 +163,8 @@ public class DialogueScr : MonoBehaviour
         {
             if (CamBack != null) CamBack.ChangeCamera();
             if (AfterDialogue != null) AfterDialogue.ActivateDialogue();
+            if (MiniGame != null)
+                MiniGame.NotKick();
             //if (Hidout != null) Hidout.CanHide = true;
         }
         if (ShoudTurnOnHidingSpot)

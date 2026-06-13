@@ -20,6 +20,8 @@ public class PictureCodePuzzle : MonoBehaviour
     [Header("Wiring")]
     [SerializeField] Camera Cam;
 
+    [SerializeField] AudioManager AudioManager;
+
     int[] clickCounts;
     Quaternion[] originalLocalRot;
     bool solved;
@@ -58,6 +60,7 @@ public class PictureCodePuzzle : MonoBehaviour
 
     void OnPictureClicked(int idx)
     {
+        AudioManager.PlaySFXRanPitch(1);
         clickCounts[idx] = (clickCounts[idx] + 1) % Mathf.Max(1, ClicksToReset);
 
         float dir = (Directions != null && idx < Directions.Length) ? Mathf.Sign(Directions[idx]) : ((idx % 2 == 0) ? +1f : -1f);

@@ -10,6 +10,8 @@ public class CameraChange : MonoBehaviour
     [SerializeField] GameObject DialoguePan;
     [SerializeField] Camerafollower CamFollow;
     [SerializeField] GameObject ToActivate;
+
+    [SerializeField] AudioManager AudioManager;
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -62,6 +64,10 @@ public class CameraChange : MonoBehaviour
         if (ToActivate != null)
         {
             ToActivate.SetActive(true);
+        }
+        if (AudioManager != null)
+        {
+            AudioManager.PlayUI(0);
         }
     }
 }

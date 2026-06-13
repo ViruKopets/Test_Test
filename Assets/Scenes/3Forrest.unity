@@ -172,6 +172,7 @@ MonoBehaviour:
   DialoguePan: {fileID: 512247582}
   CamFollow: {fileID: 1903983727}
   ToActivate: {fileID: 1782385992}
+  AudioManager: {fileID: 0}
 --- !u!61 &29187822
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -867,6 +868,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: SFXList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: 'SFXList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 17b15471e0fd8be46864be2b2f26161b, type: 3}
+    - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: 'SFXList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 7479738f3def9ac4b962aae43786ca6d, type: 3}
+    - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: 'MusicList.Array.data[0]'
       value: 
       objectReference: {fileID: 8300000, guid: 3e139fae9cbaeab4fa471af8a2060d89, type: 3}
@@ -970,6 +983,34 @@ PrefabInstance:
       propertyPath: ObjToOn.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2353098814959043117, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2353098814959043117, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2353098814959043117, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 512247586}
+    - target: {fileID: 2353098814959043117, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2353098814959043117, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2353098814959043117, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2353098814959043117, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6257929436247499477, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: m_VertexColorAlwaysGammaSpace
       value: 1
@@ -1069,6 +1110,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &512247586 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+  m_PrefabInstance: {fileID: 512247581}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed2e795a17e59d478c0cc17a463a4a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &533157559
@@ -1961,6 +2013,7 @@ MonoBehaviour:
   hintDialog: {fileID: 690637477}
   brokenDialog: {fileID: 0}
   replayButton: {fileID: 608639291}
+  audioManager: {fileID: 512247586}
 --- !u!114 &1008603905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4295,6 +4348,10 @@ MonoBehaviour:
   TurnOff: {fileID: 0}
   IsProgress: 1
   ProggressId: 0
+  Sfx: 0
+  UI: 0
+  audioManager: {fileID: 0}
+  AudioIndex: 0
   endgate: 0
 --- !u!1 &2074474580
 GameObject:
@@ -4480,6 +4537,7 @@ MonoBehaviour:
   DialoguePan: {fileID: 512247582}
   CamFollow: {fileID: 1903983727}
   ToActivate: {fileID: 1782385992}
+  AudioManager: {fileID: 512247586}
 --- !u!61 &2091234548
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -336,6 +336,7 @@ MonoBehaviour:
   SceneName: 6GranHouse
   Player: {fileID: 1629998035}
   MiniGame: {fileID: 0}
+  AudioManager: {fileID: 1358912442}
 --- !u!4 &184097305
 Transform:
   m_ObjectHideFlags: 0
@@ -1914,6 +1915,7 @@ MonoBehaviour:
   DialoguePan: {fileID: 1358912438}
   CamFollow: {fileID: 0}
   ToActivate: {fileID: 0}
+  AudioManager: {fileID: 1358912442}
 --- !u!61 &925315624
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2681,7 +2683,7 @@ GameObject:
   - component: {fileID: 1260141166}
   - component: {fileID: 1260141167}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: MiniGameActivaotr
   m_TagString: ChangeCam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2835,9 +2837,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: SFXList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: MusicList.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+      propertyPath: 'SFXList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: a9131f6ebb6dd7c4496e98d3a79cc097, type: 3}
     - target: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
       propertyPath: 'MusicList.Array.data[0]'
       value: 
@@ -3045,6 +3055,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1358912442 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 984030839589885008, guid: ffe7f07841836b349b148546b28fb6e9, type: 3}
+  m_PrefabInstance: {fileID: 1358912437}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed2e795a17e59d478c0cc17a463a4a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1407772346
@@ -4166,6 +4187,7 @@ MonoBehaviour:
   DialoguePan: {fileID: 1358912438}
   CamFollow: {fileID: 0}
   ToActivate: {fileID: 0}
+  AudioManager: {fileID: 0}
 --- !u!1 &1882566590
 GameObject:
   m_ObjectHideFlags: 0
@@ -4438,6 +4460,7 @@ MonoBehaviour:
   ClicksToReset: 5
   Directions: 01000000ffffffff01000000ffffffff
   Cam: {fileID: 0}
+  AudioManager: {fileID: 1358912442}
 --- !u!4 &1890830115
 Transform:
   m_ObjectHideFlags: 0

@@ -44,6 +44,8 @@ public class IcePuzzleManager : MonoBehaviour
     public event Action<CompassTier> OnSolved;
     public event Action OnFailed;
 
+    [SerializeField] AudioManager audioManager;
+
     int _wrongHits;
     bool _hintFired;
     bool _buttonShown;
@@ -126,6 +128,7 @@ public class IcePuzzleManager : MonoBehaviour
         // Compass broken — fail.
         if (compass != null && compass.Current <= 0)
             Fail();
+        audioManager.PlaySFXRanPitch(0);
     }
 
     void Solve()
@@ -137,6 +140,7 @@ public class IcePuzzleManager : MonoBehaviour
         if (replayButton != null) replayButton.SetActive(true);
         OnSolved?.Invoke(compass != null ? compass.Tier : CompassTier.Pristine);
         if (ui != null) ui.gameObject.SetActive(false);
+        audioManager.PlaySFX(1);
     }
 
     void Fail()

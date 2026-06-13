@@ -15,6 +15,8 @@ public class Bootstraper : MonoBehaviour
     Vector3 PosOut = new Vector3(0, -1000, 0);
     GameManager Gm;
 
+    [SerializeField] AudioManager AudioManager;
+
     public void Start()
     {
         GameObject[] objects = GameObject.FindGameObjectsWithTag("GameManager");
@@ -30,7 +32,7 @@ public class Bootstraper : MonoBehaviour
         {
             Dialogs[0].ActivateDialogue();
         }
-        if (Gm.CheckProgress(6)&&PosId==4)
+        if (Gm.CheckProgress(6) && PosId == 4)
         {
             Dialogs[1].ActivateDialogue();
         }
@@ -78,5 +80,10 @@ public class Bootstraper : MonoBehaviour
     {
         ObjToOff[Index].SetActive(false);
 
+    }
+
+    public void ChangeMusic()
+    {
+        AudioManager.ChangeMusic(1);
     }
 }

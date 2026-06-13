@@ -9,9 +9,15 @@ public class Player : MonoBehaviour
     float hor;
     bool Freeze;
 
+    [SerializeField] Animator Anim;
+
     void Update()
     {
-        if (Freeze) return;
+        if (Freeze)
+        {
+            Anim.SetBool("Walk", false);
+            return;
+        }
         Moving();
     }
     public void Moving()
@@ -20,6 +26,11 @@ public class Player : MonoBehaviour
         if (hor != 0)
         {
             rb.linearVelocity = new Vector2(Speed * hor, rb.linearVelocity.y);
+            Anim.SetBool("Walk", true);
+        }
+        else
+        {
+            Anim.SetBool("Walk", false);
         }
         if (hor < 0)
         {

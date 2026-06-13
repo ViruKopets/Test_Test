@@ -24,6 +24,13 @@ public class AudioManager : MonoBehaviour
     }
     public void PlayUI(int ClipIndex)
     {
+        SFXSource.pitch = 1f;
         UISource.PlayOneShot(UIList[ClipIndex]);
+    }
+
+    public void PlaySFXRanPitch(int ClipIndex)
+    {
+        SFXSource.pitch = Random.Range(0.8f,1.3f);
+        SFXSource.PlayOneShot(SFXList[ClipIndex]);
     }
 }
