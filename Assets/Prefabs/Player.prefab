@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4672585240066158510}
-  Speed: 15
+  Speed: 7
   Sprite: {fileID: 2299460207120663761}
   Anim: {fileID: 845528640593790709}
   Audio: {fileID: 7979625539665624665}

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 19c9162c3af8d7a449a6b72127fcf75c
+guid: 54297ba8ebb42fb45a7a31de8d5ee132
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 557859925849892247
-    second: TheBar_0
+      213: 5691947647885062421
+    second: "IMG_032911111 \u043A\u043E\u043F\u0438\u044F_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,10 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -85,19 +85,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -126,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TheBar_0
+      name: "IMG_032911111 \u043A\u043E\u043F\u0438\u044F_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3840
+        width: 8640
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -141,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 79565ba95aaedb700800000000000000
-      internalID: 557859925849892247
+      spriteID: 5113f408a3cddfe40800000000000000
+      internalID: 5691947647885062421
       vertices: []
       indices: 
       edges: []
@@ -161,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TheBar_0: 557859925849892247
+      "IMG_032911111 \u043A\u043E\u043F\u0438\u044F_0": 5691947647885062421
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
