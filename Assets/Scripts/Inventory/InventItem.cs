@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using static UnityEngine.Rendering.VolumeComponent;
 
-public class InventItem : MonoBehaviour, IDragHandler, IDropHandler
+public class InventItem : MonoBehaviour, IDragHandler, IDropHandler, IEndDragHandler
 {
     [SerializeField] int MyId;
     [SerializeField] Inventory Invent;
@@ -33,12 +33,24 @@ public class InventItem : MonoBehaviour, IDragHandler, IDropHandler
         }
     }
 
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        if (IsSomething)
+        {
+            MyRect.anchoredPosition = DefaulPos;
+        }
+    }
+
     public void OnDrop(PointerEventData eventData)
     {
         if (!IsSomething) return;
 
+        MyRect.anchoredPosition = DefaulPos;
+
         Vector2 mousePosition = Cam.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+
+        MyRect.anchoredPosition = DefaulPos;
 
         if (hit.collider != null)
         {
@@ -46,6 +58,8 @@ public class InventItem : MonoBehaviour, IDragHandler, IDropHandler
             {
                 LastItem = hit.collider.GetComponent<Chest>();
                 Invent.CompareCompat(LastItem.PassInfo(), MyId);
+
+                MyRect.anchoredPosition = DefaulPos;
             }
             MyRect.anchoredPosition = DefaulPos;
         }
