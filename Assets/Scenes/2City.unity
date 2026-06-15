@@ -223,7 +223,7 @@ Transform:
   m_GameObject: {fileID: 49501585}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -133.18, y: 0, z: 0}
+  m_LocalPosition: {x: -128.52, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1339,7 +1339,7 @@ MonoBehaviour:
   - "\u0418 \u0447\u0442\u043E \u044D\u0442\u043E \u0443 \u043D\u0435\u0433\u043E
     \u0438\u0437 \u043A\u0430\u0440\u043C\u0430\u043D\u0430 \u0442\u043E\u0440\u0447\u0438\u0442?"
   - "\u041A\u043B\u044E\u0447\u0438 \u043E\u0442 \u0445\u043E\u0441\u0442\u0435\u043B\u0430?"
-  - "\u041A\u043E\u043C\u043D\u0430\u0442\u0430 \u043D\u043E\u043C\u0435\u0440 2..."
+  - "\u041A\u043E\u043C\u043D\u0430\u0442\u0430 \u043D\u043E\u043C\u0435\u0440 168..."
   Names:
   - "\u0410\u043B\u0438\u0441\u0430"
   - "\u0410\u043B\u0438\u0441\u0430"
@@ -1844,8 +1844,8 @@ Transform:
   m_GameObject: {fileID: 1232460517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 123.43, y: 0.8, z: 0}
-  m_LocalScale: {x: 0.281871, y: 0.29720044, z: 1}
+  m_LocalPosition: {x: 123.58, y: 0.99, z: 0}
+  m_LocalScale: {x: 0.33639556, y: 0.3546903, z: 1.193438}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1003743910}
